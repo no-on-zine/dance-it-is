@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -390,5 +391,10 @@ template {
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 /*# sourceMappingURL=top.css.map */

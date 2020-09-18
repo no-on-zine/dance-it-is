@@ -5,6 +5,36 @@ $red:#ED0018;
 $blue:#0012B3;
 $green:#008033;
 $yellow:#FFB61C;
+$sans-serif:din-2014,
+"游ゴシック体",
+YuGothic,
+"游ゴシック",
+"Yu Gothic",
+sans-serif;
+$serif:YuMincho,
+'Yu Mincho',
+serif;
+$breakpoint-sm: 400px !default;
+$breakpoint-md: 769px !default;
+$breakpoint-lg: 1000px !default;
+$breakpoint-up: ('sm': 'screen and (min-width: 400px)', 'md': 'screen and (min-width: 769px)', 'lg': 'screen and (min-width: 1000px)', 'xl': 'screen and (min-width: 1200px)', ) !default;
+@mixin mq-up($breakpoint: md) {
+    @media #{map-get($breakpoint-up, $breakpoint)} {
+        @content;
+    }
+}
+
+@mixin flex($fl:flex, $wr:wrap, $s-b:space-between) {
+    display: $fl;
+    flex-wrap: $wr;
+    justify-content: $s-b;
+}
+
 html {
     font-size: 62.5%;
+}
+
+body {
+    font-size: 1.2rem;
+    font-family: $sans-serif;
 }
