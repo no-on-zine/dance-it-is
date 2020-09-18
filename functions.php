@@ -267,7 +267,6 @@ wp_enqueue_script( 'jquery.inview.min', get_template_directory_uri() . '/js/jque
 wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.4', false );
 
 // CSS
-wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css', "", '1.1.1' );
 
 if ( ( is_page_template( array('page-top-jp.php','page-top-en.php','page-top-fr.php')) ) ) {
       wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.0.3' );
