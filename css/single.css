@@ -397,4 +397,116 @@ body {
   font-size: 1.2rem;
   font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
+
+.c_wrap {
+  max-width: 1920px;
+  margin: auto;
+}
+
+header .c_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 2% 10px;
+}
+
+header .c_wrap .h_right {
+  width: 30%;
+}
+
+header .c_wrap .h_right h1 a {
+  display: block;
+}
+
+header .c_wrap .h_left {
+  width: 50%;
+}
+
+header .c_wrap .h_left .sns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .c_wrap .h_left .sns ul li {
+  max-width: 30px;
+  margin: 0 0 15px 15px;
+}
+
+header .c_wrap .h_left nav .pc_nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+header .c_wrap .h_left nav .pc_nav li {
+  margin: 0 0 0 10px;
+  letter-spacing: 1.5px;
+}
+
+header .c_wrap .h_left nav .sp_nav {
+  display: none;
+}
+
+footer {
+  background: #000000;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+footer .c_wrap {
+  padding: 2%;
+}
+
+footer .c_wrap .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+footer .c_wrap .flex .sns ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .c_wrap .flex .sns ul li {
+  max-width: 30px;
+  margin: 0 0 0 15px;
+}
+
+footer .c_wrap .flex .f_logo {
+  max-width: 100px;
+  margin: 0 0 0 20px;
+}
 /*# sourceMappingURL=single.css.map */

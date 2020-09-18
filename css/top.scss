@@ -1,2 +1,40 @@
 @import "reset";
 @import "main";
+main {
+    #m_v {
+        position: relative;
+        .w_box {
+            background: #fff;
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            z-index: 100;
+        }
+        .c_wrap {
+            display: flex;
+            align-items: flex-end;
+            .text {
+                writing-mode: vertical-rl;
+                font-weight: bold;
+                padding: 0 10px;
+            }
+            .slider {
+                position: relative;
+                .m_v_text {
+                    position: absolute;
+                    bottom: 10%;
+                    width: 65%;
+                    right: 5%;
+                }
+                .metaslider {
+                    .flexslider {
+                        margin: 0;
+                    }
+                    .flex-control-nav {
+                        bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

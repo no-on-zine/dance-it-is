@@ -38,3 +38,75 @@ body {
     font-size: 1.2rem;
     font-family: $sans-serif;
 }
+
+.c_wrap {
+    max-width: 1920px;
+    margin: auto;
+}
+
+header {
+    .c_wrap {
+        @include flex();
+        padding: 20px 2% 10px;
+        .h_right {
+            width: 30%;
+            h1 {
+                a {
+                    display: block;
+                }
+            }
+        }
+        .h_left {
+            width: 50%;
+            .sns {
+                ul {
+                    @include flex(flex, nowrap, flex-end);
+                    li {
+                        max-width: 30px;
+                        margin: 0 0 15px 15px;
+                    }
+                }
+            }
+            nav {
+                .pc_nav {
+                    @include flex(flex, nowrap, flex-end);
+                    li {
+                        margin: 0 0 0 10px;
+                        letter-spacing: 1.5px;
+                    }
+                }
+                .sp_nav {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: $black;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;
+    .c_wrap {
+        padding: 2%;
+        .flex {
+            @include flex(flex, nowrap, center);
+            align-items: center;
+            margin: 20px 0;
+            .sns {
+                ul {
+                    @include flex(flex, nowrap, space-between);
+                    li {
+                        max-width: 30px;
+                        margin: 0 0 0 15px;
+                    }
+                }
+            }
+            .f_logo {
+                max-width: 100px;
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+}
