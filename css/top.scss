@@ -39,4 +39,190 @@ main {
             }
         }
     }
+    section#news {
+        .c_wrap {
+            position: relative;
+            margin: 30px auto;
+            .flex {
+                margin: 0 0 0 60px;
+                .news_h {
+                    font-weight: bold;
+                    font-size: 2.2rem;
+                    letter-spacing: 3px;
+                    float: left;
+                }
+                #ticker-fade {
+                    width: 60%;
+                    border: none;
+                    font-size: 1.7rem;
+                    padding: 4px 0 30px 0;
+                    margin: 0;
+                }
+            }
+            .more {
+                max-width: 90px;
+                position: absolute;
+                top: 0;
+                right: 1%;
+            }
+        }
+    }
+    section#about_project {
+        .c_wrap {
+            @include m-w;
+            margin: 70px auto;
+            .c_text {
+                font-size: 1.6rem;
+                h2 {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                }
+                .detail {
+                    margin: 15px 0 0;
+                    a {
+                        border: 1px solid #000;
+                        padding: 6px 17px;
+                    }
+                }
+            }
+        }
+    }
+    section#platform {
+        .c_wrap {
+            background-color: #f1e9e0;
+            background-image: url(../images/top/map.png), repeating-linear-gradient(60deg, #e1d9d1, #e1d9d1 1px, transparent 0, transparent 14px);
+            background-position: 2% 78%;
+            background-size: 46%, 100%;
+            background-repeat: no-repeat;
+            margin: 70px auto;
+            .flex {
+                @include m-w;
+                @include flex;
+                margin: auto;
+                padding: 50px 0;
+                .c_text {
+                    width: 30%;
+                    font-size: 1.6rem;
+                    h2 {
+                        font-size: 4rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                    }
+                    .detail {
+                        margin: 25px 0;
+                        a {
+                            border: 1px solid #000;
+                            padding: 6px 17px;
+                        }
+                    }
+                    .bold {
+                        font-weight: bold;
+                        h3 {
+                            font-size: 1.8rem;
+                            background: url(../images/top/ex.png) no-repeat 0 center/20px;
+                            padding: 0 0 0 25px;
+                        }
+                    }
+                }
+                .p_list {
+                    width: 65%;
+                    .p_list_items {
+                        @include flex(flex, nowrap, flex-start);
+                        margin: 0 0 30px;
+                        h3 {
+                            writing-mode: vertical-rl;
+                            font-weight: bold;
+                            font-size: 1.8rem;
+                            line-height: 1.5;
+                            border-right: 1px solid #000;
+                            padding: 0 15px 0 0;
+                            span {
+                                font-size: 1.2rem;
+                                display: block;
+                            }
+                        }
+                        .i_w {
+                            margin: 0 0 0 20px;
+                            .item {
+                                margin: 0 0 20px;
+                                h4 {
+                                    font-weight: bold;
+                                    span {
+                                        color: #fff;
+                                        font-weight: normal;
+                                        padding: 4px 15px;
+                                        display: inline-block;
+                                        margin: 0 10px 0 0;
+                                        line-height: 1;
+                                        &.red {
+                                            background: $red;
+                                        }
+                                        &.blue {
+                                            background: $blue;
+                                        }
+                                        &.green {
+                                            background: $green;
+                                        }
+                                        &.yellow {
+                                            background: $yellow;
+                                        }
+                                    }
+                                }
+                                p {
+                                    font-size: 2.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    section#program {
+        .c_wrap {
+            .steps {
+                @include m-w;
+                margin: auto;
+                h2 {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                }
+            }
+            .p_detail {
+                .summary_point {
+                    @include m-w;
+                    margin: auto;
+                    ul {
+                        li {
+                            display: none;
+                            &.blank {
+                                display: block;
+                            }
+                            &.none {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+                .flex {
+                    @include flex;
+                    .flex_items {
+                        width: 19.5%;
+                        .img_w {
+                            img {
+                                transition: filter 0.3s ease;
+                                cursor: pointer;
+                            }
+                            &:hover {
+                                filter: hue-rotate(70deg)brightness(0.5)saturate(6.5);
+                                transition: filter 0.3s ease;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

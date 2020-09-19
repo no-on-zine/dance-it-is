@@ -1,7 +1,7 @@
 <section id="f_menu">
     <div class="c_wrap">
         <div class="nav_w">
-            <ul class="pc_nav">
+            <ul class="pc_nav slide_fade10">
                 <li>
                     <a href="<?php echo home_url() ?>/dii2020/about">ABOUT</a>
                 </li>
@@ -30,7 +30,7 @@
                 <img src="<?php bloginfo('template_url'); ?>/images/common/menu_l.png">
             </div>
         </div>
-        <div class="menu_w">
+        <div class="menu_w slide_fade10">
             <ul>
                 <li>
                     <a href="#">プロジェクトについて</a>
@@ -91,16 +91,16 @@
             </ul>
         </div>
 
-        <div class="info_1 info_b">
+        <div class="info_1 info_b slide_fade10">
             文化庁委託事業「令和2年度次代の文化を創造する新進芸術家育成事業」<br> 主催：文化庁／NPO法人ジャパン・コンテンポラリーダンス・ネットワーク（JCDN）
             <br> 各地共催・制作・協力：北海道コンテンポラリーダンス普及委員会／ダンスハウス黄金4442／Dance Camp Project／<br> 城崎国際アートセンター（豊岡市）／NPO法人DANCE BOX／FREE HEARTS／広島市安芸区民文化センター／C3/Contact Choreograph Crossing／<br> 一般社団法人ダンスアンドエンヴァイロメント／micelle／あけぼのアート&コミュニティーセンター（札幌）／ボディ・アーツ・ラボラトリー／
             <br> NPO法人コデックス／ダンスヒストリー・スタディーズ／Dance New Air（一般社団法人ダンス・ニッポン・アソシエイツ）／<br> 京都芸術センター（Co-programカテゴリーD「KACセレクション」採択企画）
         </div>
-        <div class="info_2 info_b">
+        <div class="info_2 info_b slide_fade10">
             事務局：NPO法人ジャパン・コンテンポラリーダンス・ネットワーク（JCDN）<br> 統括：佐東範一　運営：神前沙織、榊原愛
             <br> 〒600-8092 京都府京都市下京区神明町241オパス四条503 <br> Tel: 075-361-4685 Fax: 075-361-6225 Web: http://www.jcdn.org
         </div>
-        <div class="info_3 info_b">
+        <div class="info_3 info_b slide_fade10">
             <ul>
                 <li>
                     <img src="<?php bloginfo('template_url'); ?>/images/common/f_1.png" alt="文化庁">

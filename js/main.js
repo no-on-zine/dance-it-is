@@ -1,31 +1,31 @@
 /*--------- Menu ---------*/
 
 jQuery(function() {
-  jQuery('.menu-trigger').on('click', function(){
-    jQuery('header').toggleClass('active');
-    return false;
-  });
+    jQuery('.menu-trigger').on('click', function() {
+        jQuery('header').toggleClass('active');
+        return false;
+    });
 });
 
 jQuery(function() {
-  jQuery('.menu_close').on('click', function(){
-    jQuery('header').removeClass('active');
-    return false;
-  });
+    jQuery('.menu_close').on('click', function() {
+        jQuery('header').removeClass('active');
+        return false;
+    });
 });
 
 jQuery(function() {
-  jQuery('.menu_t').on('click', function(){
-    jQuery('header').toggleClass('active');
-    return false;
-  });
+    jQuery('.menu_t').on('click', function() {
+        jQuery('header').toggleClass('active');
+        return false;
+    });
 });
 
 jQuery(function() {
-  jQuery('.menu_close').on('click', function(){
-    jQuery('header').removeClass('active');
-    return false;
-  });
+    jQuery('.menu_close').on('click', function() {
+        jQuery('header').removeClass('active');
+        return false;
+    });
 });
 
 
@@ -33,219 +33,95 @@ jQuery(function() {
 /*--------- 下から上に移動　フェードイン ---------*/
 
 jQuery(function() {
-	jQuery('.list-mv07').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-		if (isInView){
-			jQuery(this).stop().addClass('mv07');
-		}
-	});
-	
-	jQuery('.list-mv08').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
-		if (isInView){
-			jQuery(this).stop().addClass('mv08');
-		}
-	});
+    jQuery('.slide_fade20').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+            jQuery(this).stop().addClass('set');
+        }
+    });
+
+    jQuery('.slide_fade10').on('inview', function(event, isInView, visiblePartX, visiblePartY) {
+        if (isInView) {
+            jQuery(this).stop().addClass('set');
+        }
+    });
 });
 
 /*--------- スティッキーヘッダー ---------*/
-jQuery(function($){
-$(function() {
-  var $win = $(window),
-      $cloneNav = $('.p_header').clone().addClass('clone-nav').appendTo('body'),
-      showClass = 'is-show';
+jQuery(function($) {
+    $(function() {
+        var $win = $(window),
+            $cloneNav = $('.p_header').clone().addClass('clone-nav').appendTo('body'),
+            showClass = 'is-show';
 
-  $win.on('load scroll', function() {
-    var value = $(this).scrollTop();
-    if ( value > 400 ) {
-      $cloneNav.addClass(showClass);
-    } else {
-      $cloneNav.removeClass(showClass);
-    }
-  });
-});
-
-});
-
-/*--------- News Works sp Categry ---------*/
-
-jQuery(function() {
-  jQuery('.cat_l_sp_btn').on('click', function(){
-    jQuery('#cat_m').toggleClass('active');
-    return false;
-  });
-});
-
-
-/*--------- Google map ---------*/
-(function($) {
-
-/*
-*  new_map
-*
-*  This function will render a Google Map onto the selected jQuery element
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	$el (jQuery element)
-*  @return	n/a
-*/
-
-function new_map( $el ) {
-	
-	// var
-	var $markers = $el.find('.marker');
-	
-	
-	// vars
-	var args = {
-		zoom		: 10,
-		center		: new google.maps.LatLng(0, 0),
-		mapTypeId	: google.maps.MapTypeId.ROADMAP,
-	  mapTypeControl: false, //マップタイプ コントロール
-	  fullscreenControl: false, //全画面表示コントロール
-	  streetViewControl: false, //ストリートビュー コントロール
-	  zoomControl: false //ズーム コントロール
-	};
-	
-	// create map	        	
-	var map = new google.maps.Map( $el[0], args);
-	
-	
-	// add a markers reference
-	map.markers = [];
-	
-	
-	// add markers
-	$markers.each(function(){
-		
-    	add_marker( $(this), map );
-		
-	});
-	
-	
-	// center map
-	center_map( map );
-	
-	
-	// return
-	return map;
-	
-}
-
-/*
-*  add_marker
-*
-*  This function will add a marker to the selected Google Map
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	$marker (jQuery element)
-*  @param	map (Google Map object)
-*  @return	n/a
-*/
-
-function add_marker( $marker, map ) {
-
-	// var
-	var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
-
-	// create marker
-	var marker = new google.maps.Marker({
-		position	: latlng,
-		map			: map
-	});
-	
-
-	// add to array
-	map.markers.push( marker );
-
-	// if marker contains HTML, add it to an infoWindow
-	if( $marker.html() )
-	{
-		// create info window
-		var infowindow = new google.maps.InfoWindow({
-			content		: $marker.html()
-		});
-
-		// show info window when marker is clicked
-		google.maps.event.addListener(marker, 'click', function() {
-
-			infowindow.open( map, marker );
-
-		});
-	}
-
-}
-
-/*
-*  center_map
-*
-*  This function will center the map, showing all markers attached to this map
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	4.3.0
-*
-*  @param	map (Google Map object)
-*  @return	n/a
-*/
-
-function center_map( map ) {
-
-	// vars
-	var bounds = new google.maps.LatLngBounds();
-
-	// loop through all markers and create bounds
-	$.each( map.markers, function( i, marker ){
-
-		var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
-
-		bounds.extend( latlng );
-
-	});
-
-	// only 1 marker?
-	if( map.markers.length == 1 )
-	{
-		// set center of map
-	    map.setCenter( bounds.getCenter() );
-	    map.setZoom( 10 );
-	}
-	else
-	{
-		// fit to bounds
-		map.fitBounds( bounds );
-	}
-
-}
-
-/*
-*  document ready
-*
-*  This function will render each map when the document is ready (page has loaded)
-*
-*  @type	function
-*  @date	8/11/2013
-*  @since	5.0.0
-*
-*  @param	n/a
-*  @return	n/a
-*/
-// global var
-var map = null;
-
-$(document).ready(function(){
-
-	$('.acf-map').each(function(){
-
-		// create map
-		map = new_map( $(this) );
-
-	});
+        $win.on('load scroll', function() {
+            var value = $(this).scrollTop();
+            if (value > 400) {
+                $cloneNav.addClass(showClass);
+            } else {
+                $cloneNav.removeClass(showClass);
+            }
+        });
+    });
 
 });
 
-})(jQuery);
+jQuery(function($) {
+    $.simpleTicker($("#ticker-fade"), { 'effectType': 'fade' });
+});
+
+jQuery(function($) {
+    $(".s_0").t()
+
+    //マウスを乗せたら発動
+    $('.s_1_hover').hover(function() {
+        $(".s_1").t()
+        $('.s_1').removeClass('none');
+        $('.s_0, .s_2, .s_3, .s_4, .s_5, .s_6, .s_7, .s_8, .s_9, .s_10').addClass('none');
+
+    });
+    $('.s_2_hover').hover(function() {
+        $(".s_2").t()
+        $('.s_2').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_6, .s_7, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_3_hover').hover(function() {
+        $(".s_3").t()
+        $('.s_3').removeClass('none');
+        $('.s_0, .s_1, .s_2, .s_4, .s_5, .s_6, .s_7, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_4_hover').hover(function() {
+        $(".s_4").t()
+        $('.s_4').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_2, .s_5, .s_6, .s_7, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_5_hover').hover(function() {
+        $(".s_5").t()
+        $('.s_5').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_2, .s_6, .s_7, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_6_hover').hover(function() {
+        $(".s_6").t()
+        $('.s_6').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_2, .s_7, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_7_hover').hover(function() {
+        $(".s_7").t()
+        $('.s_7').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_6, .s_2, .s_8, .s_9, .s_10').addClass('none');
+    });
+    $('.s_8_hover').hover(function() {
+        $(".s_8").t()
+        $('.s_8').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_6, .s_7, .s_2, .s_9, .s_10').addClass('none');
+    });
+    $('.s_9_hover').hover(function() {
+        $(".s_9").t()
+        $('.s_9').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_6, .s_7, .s_8, .s_2, .s_10').addClass('none');
+    });
+    $('.s_10_hover').hover(function() {
+        $(".s_10").t()
+        $('.s_10').removeClass('none');
+        $('.s_0, .s_1, .s_3, .s_4, .s_5, .s_6, .s_7, .s_8, .s_9, .s_2').addClass('none');
+    });
+});

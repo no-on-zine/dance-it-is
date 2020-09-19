@@ -396,11 +396,73 @@ html {
 body {
   font-size: 1.2rem;
   font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  line-height: 1.8;
+}
+
+a:link {
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.video-container,
+.wp-embed-aspect-16-9 {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.wp-embed-aspect-16-9 {
+  margin: 0 auto 5px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed,
+.wp-embed-aspect-16-9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide_fade10 {
+  -webkit-transition: .8s;
+  transition: .8s;
+  opacity: 0;
+  -webkit-transform: translate(0, 10px);
+          transform: translate(0, 10px);
+}
+
+.slide_fade20 {
+  -webkit-transition: .8s;
+  transition: .8s;
+  opacity: 0;
+  -webkit-transform: translate(0, 20px);
+          transform: translate(0, 20px);
+}
+
+.set {
+  opacity: 1.0;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .c_wrap {
   max-width: 1920px;
   margin: auto;
+}
+
+.cf::after {
+  display: table;
+  content: "";
+  clear: both;
 }
 
 header .c_wrap {
@@ -476,13 +538,11 @@ section#f_menu .c_wrap .nav_w .pc_nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.5rem;
-  padding: 0 10%;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 1.8rem;
 }
 
 section#f_menu .c_wrap .nav_w .pc_nav li {
@@ -495,7 +555,7 @@ section#f_menu .c_wrap .nav_w .pc_nav li:nth-of-type(1) {
 }
 
 section#f_menu .c_wrap .nav_w .menu_l {
-  padding: 0 12%;
+  padding: 0 3.9%;
   margin: 5px auto;
 }
 
@@ -508,7 +568,6 @@ section#f_menu .c_wrap .menu_w {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 6%;
 }
 
 section#f_menu .c_wrap .menu_w ul:nth-of-type(2) {
