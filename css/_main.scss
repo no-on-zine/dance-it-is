@@ -73,10 +73,48 @@ header {
                     li {
                         margin: 0 0 0 10px;
                         letter-spacing: 1.5px;
+                        &:nth-last-of-type(1) {
+                            margin: 0;
+                        }
                     }
                 }
                 .sp_nav {
                     display: none;
+                }
+            }
+        }
+    }
+}
+
+section#f_menu {
+    .c_wrap {
+        .nav_w {
+            .pc_nav {
+                @include flex(flex, wrap, center);
+                li {
+                    margin: 0 0 0 10px;
+                    letter-spacing: 1.5px;
+                    &:nth-of-type(1) {
+                        margin: 0;
+                    }
+                }
+            }
+            .menu_l {
+                max-width: 480px;
+                margin: 5px auto;
+            }
+        }
+        .menu_w {
+            @include flex(flex, wrap, center);
+            ul {
+                margin: 0 10px;
+                &:nth-of-type(2) {
+                    width: 15%;
+                }
+                li {
+                    background: url(../images/common/list_c.png) no-repeat left 4px/5px;
+                    padding: 0 0 0 8px;
+                    margin: 0 0 10px;
                 }
             }
         }
