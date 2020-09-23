@@ -1,10 +1,11 @@
 @charset "utf-8";
+
 * {
     box-sizing: border-box;
 }
 
- ::before,
- ::after {
+::before,
+::after {
     box-sizing: inherit;
 }
 
@@ -142,6 +143,7 @@ img {
     border-style: none;
     vertical-align: bottom;
     max-width: 100%;
+    height: auto;
 }
 
 embed,
@@ -326,7 +328,7 @@ textarea {
    * 2. Change font properties to `inherit` in Safari.
    */
 
- ::-webkit-file-upload-button {
+::-webkit-file-upload-button {
     -webkit-appearance: button;
     /* 1 */
     font: inherit;

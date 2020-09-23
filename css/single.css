@@ -146,6 +146,7 @@ img {
   border-style: none;
   vertical-align: bottom;
   max-width: 100%;
+  height: auto;
 }
 
 embed,
@@ -734,7 +735,6 @@ main #m_v .w_box {
 }
 
 main #m_v .c_wrap {
-  height: 650px;
   width: 100%;
   position: relative;
 }
@@ -782,7 +782,7 @@ main #m_v .c_wrap .summary_points {
   position: absolute;
   top: 0px;
   right: 10%;
-  height: 650px;
+  height: 100%;
   padding: 5% 20px;
 }
 
