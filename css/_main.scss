@@ -18,6 +18,7 @@ $breakpoint-sm: 400px !default;
 $breakpoint-md: 769px !default;
 $breakpoint-lg: 1000px !default;
 $breakpoint-up: ('sm': 'screen and (min-width: 400px)', 'md': 'screen and (min-width: 769px)', 'lg': 'screen and (min-width: 1000px)', 'xl': 'screen and (min-width: 1200px)', ) !default;
+
 @mixin mq-up($breakpoint: md) {
     @media #{map-get($breakpoint-up, $breakpoint)} {
         @content;
@@ -39,7 +40,7 @@ html {
 }
 
 body {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: $sans-serif;
     line-height: 1.8;
 }
@@ -48,6 +49,7 @@ a {
     &:link {
         transition: opacity 0.3s ease;
     }
+
     &:hover {
         opacity: 0.7;
     }
@@ -109,37 +111,46 @@ header {
     .c_wrap {
         @include flex();
         padding: 30px 2% 10px;
+
         .h_right {
             width: 25%;
+
             h1 {
                 a {
                     display: block;
                 }
             }
         }
+
         .h_left {
             width: 65%;
+
             .sns {
                 ul {
                     @include flex(flex, nowrap, flex-end);
+
                     li {
                         max-width: 30px;
                         margin: 0 0 15px 15px;
                     }
                 }
             }
+
             nav {
                 .pc_nav {
                     @include flex(flex, nowrap, flex-end);
                     font-size: 1.8rem;
+
                     li {
                         margin: 0 0 0 10px;
                         letter-spacing: 1.5px;
+
                         &:nth-of-type(1) {
                             margin: 0;
                         }
                     }
                 }
+
                 .sp_nav {
                     display: none;
                 }
@@ -151,29 +162,36 @@ header {
 section#f_menu {
     .c_wrap {
         @include m-w();
+
         .nav_w {
             .pc_nav {
                 @include flex(flex, nowrap, space-around);
                 font-size: 1.8rem;
+
                 li {
                     margin: 0 0 0 10px;
                     letter-spacing: 1.5px;
+
                     &:nth-of-type(1) {
                         margin: 0;
                     }
                 }
             }
+
             .menu_l {
                 padding: 0 3.9%;
                 margin: 5px auto;
             }
         }
+
         .menu_w {
             @include flex(flex, nowrap, space-between);
+
             ul {
                 &:nth-of-type(2) {
                     max-width: 25%;
                 }
+
                 li {
                     background: url(../images/common/list_c.png) no-repeat left 7px/5px;
                     padding: 0 0 0 8px;
@@ -181,15 +199,18 @@ section#f_menu {
                 }
             }
         }
+
         .info_b {
             border-top: 1px solid #000;
             padding: 30px 0;
             line-height: 1.5;
         }
+
         .info_3 {
             ul {
                 @include flex(flex, nowrap, space-between);
                 align-items: center;
+
                 li {
                     margin: 0 2%;
                 }
@@ -203,21 +224,26 @@ footer {
     color: #fff;
     text-align: center;
     letter-spacing: 1.5px;
+
     .c_wrap {
         padding: 2%;
+
         .flex {
             @include flex(flex, nowrap, center);
             align-items: center;
             margin: 20px 0;
+
             .sns {
                 ul {
                     @include flex(flex, nowrap, space-between);
+
                     li {
                         max-width: 30px;
                         margin: 0 0 0 15px;
                     }
                 }
             }
+
             .f_logo {
                 max-width: 100px;
                 margin: 0 0 0 20px;

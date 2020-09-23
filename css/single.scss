@@ -1,16 +1,6 @@
 @import "reset";
 @import "main";
 
-.postid-293 {
-    main {
-        #m_v {
-            .c_wrap {
-                background: url(../images/page/kobe_bg.jpg) no-repeat right center/cover;
-            }
-        }
-    }
-}
-
 .fade,
 .box_1,
 .box_2,
@@ -147,7 +137,6 @@ main {
                     word-break: break-word;
                     margin: auto;
                     color: #fff;
-                    font-size: 1.4rem;
                 }
             }
 
@@ -200,18 +189,90 @@ main {
 
     section#overview {
         .c_wrap {
+            @include m-w;
+            margin: 70px auto;
+
             .o_box.flex {
-                display: flex;
+                @include flex(flex, wrap, flex-start);
 
                 .flex_items {
                     display: block;
                     color: $pink;
                     border: 1px solid $pink;
                     opacity: 1;
+                    width: 32%;
+                    margin: 0 2% 0 0;
+                    padding: 15px 10px;
+                    font-size: 1.8rem;
+
+                    &:nth-of-type(3n) {
+                        margin: 0;
+                    }
 
                     &.block {
                         background: $pink;
                         color: #fff;
+                    }
+
+                    p {
+                        text-align: right;
+                    }
+                }
+            }
+
+            .contents {
+                .flex {
+                    @include flex(flex, wrap, flex-start);
+
+                    .left {
+                        width: 70%;
+                        margin: 0 10% 0 0;
+
+                        .f_w {
+                            margin: 30px auto;
+
+                            h5 {
+                                color: $pink;
+                                font-weight: bold;
+                            }
+
+                            &.inquiry {
+                                h5 {
+                                    border: 1px solid $pink;
+                                    display: inline-block;
+                                    padding: 10px 30px;
+                                    margin: 0 0 10px;
+                                }
+
+                                p {
+                                    font-size: 2rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .right {
+                        width: 20%;
+                        border-left: 2px solid $pink;
+                        padding: 0 0 0 25px;
+                        margin: 50px 0 0;
+
+
+                        .lecturer {
+                            margin: 0 0 50px;
+
+                            .i_w {
+                                img {
+                                    border-radius: 50%;
+                                }
+                            }
+
+                            h5 {
+                                font-size: 1.6rem;
+                                font-weight: bold;
+                                margin: 10px 0;
+                            }
+                        }
                     }
                 }
             }

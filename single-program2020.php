@@ -190,7 +190,7 @@ get_header(); ?>
             </div>
 
             <div class="contents">
-                <div class="box_1">
+                <div class="box_1 flex">
                     <div class="left">
                         <?php $p_notice_1 = get_field('p_notice_1');?>
                         <?php if(empty($p_notice_1)):?>

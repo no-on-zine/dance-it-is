@@ -395,7 +395,7 @@ html {
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.8;
 }
@@ -652,10 +652,6 @@ footer .c_wrap .flex .f_logo {
   margin: 0 0 0 20px;
 }
 
-.postid-293 main #m_v .c_wrap {
-  background: url(../images/page/kobe_bg.jpg) no-repeat right center/cover;
-}
-
 .fade,
 .box_1,
 .box_2,
@@ -807,7 +803,6 @@ main #m_v .c_wrap .summary_points .s_p_d {
   word-break: break-word;
   margin: auto;
   color: #fff;
-  font-size: 1.4rem;
 }
 
 main #m_v .c_wrap .p_team {
@@ -861,10 +856,20 @@ main section#outline .c_wrap .date_place .flex h4 {
   font-size: 1.8rem;
 }
 
+main section#overview .c_wrap {
+  max-width: 1024px;
+  margin: 70px auto;
+}
+
 main section#overview .c_wrap .o_box.flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 main section#overview .c_wrap .o_box.flex .flex_items {
@@ -872,10 +877,79 @@ main section#overview .c_wrap .o_box.flex .flex_items {
   color: #EC008C;
   border: 1px solid #EC008C;
   opacity: 1;
+  width: 32%;
+  margin: 0 2% 0 0;
+  padding: 15px 10px;
+  font-size: 1.8rem;
+}
+
+main section#overview .c_wrap .o_box.flex .flex_items:nth-of-type(3n) {
+  margin: 0;
 }
 
 main section#overview .c_wrap .o_box.flex .flex_items.block {
   background: #EC008C;
   color: #fff;
+}
+
+main section#overview .c_wrap .o_box.flex .flex_items p {
+  text-align: right;
+}
+
+main section#overview .c_wrap .contents .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main section#overview .c_wrap .contents .flex .left {
+  width: 70%;
+  margin: 0 10% 0 0;
+}
+
+main section#overview .c_wrap .contents .flex .left .f_w {
+  margin: 30px auto;
+}
+
+main section#overview .c_wrap .contents .flex .left .f_w h5 {
+  color: #EC008C;
+  font-weight: bold;
+}
+
+main section#overview .c_wrap .contents .flex .left .f_w.inquiry h5 {
+  border: 1px solid #EC008C;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 0 0 10px;
+}
+
+main section#overview .c_wrap .contents .flex .left .f_w.inquiry p {
+  font-size: 2rem;
+}
+
+main section#overview .c_wrap .contents .flex .right {
+  width: 20%;
+  border-left: 2px solid #EC008C;
+  padding: 0 0 0 25px;
+  margin: 50px 0 0;
+}
+
+main section#overview .c_wrap .contents .flex .right .lecturer {
+  margin: 0 0 50px;
+}
+
+main section#overview .c_wrap .contents .flex .right .lecturer .i_w img {
+  border-radius: 50%;
+}
+
+main section#overview .c_wrap .contents .flex .right .lecturer h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 10px 0;
 }
 /*# sourceMappingURL=single.css.map */
