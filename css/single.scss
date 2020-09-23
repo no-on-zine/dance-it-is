@@ -1,2 +1,194 @@
 @import "reset";
 @import "main";
+.postid-293 {
+    main {
+        #m_v {
+            .c_wrap {
+                background: url(../images/page/kobe_bg.jpg) no-repeat right center/cover;
+            }
+        }
+    }
+}
+
+.fade,
+.box_1,
+.box_2,
+.box_3,
+.box_4,
+.box_5,
+.box_6,
+.box_7,
+.box_8 {
+    display: none;
+    opacity: 0;
+}
+
+.fade.block,
+.box_1.block,
+.box_2.block,
+.box_3.block,
+.box_4.block,
+.box_5.block,
+.box_6.block,
+.box_7.block,
+.box_8.block {
+    display: block;
+    opacity: 1;
+    animation-duration: 0.5s;
+    animation-name: fade-in;
+}
+
+@keyframes fade-in {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+    1% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+main {
+    padding: 0 2%;
+    #m_v {
+        position: relative;
+        .w_box {
+            background: #fff;
+            width: 100px;
+            height: 25px;
+            position: absolute;
+            z-index: 100;
+            top: -1px;
+            left: -2px;
+        }
+        .c_wrap {
+            height: 650px;
+            width: 100%;
+            position: relative;
+            .title_area {
+                position: absolute;
+                bottom: 10%;
+                left: 20%;
+                div {
+                    ul {
+                        display: flex;
+                        li {
+                            background: #fff;
+                        }
+                    }
+                    &.select_1 {
+                        li:nth-of-type(1) {
+                            color: #fff;
+                            background: $pink;
+                        }
+                    }
+                    &.select_2 {
+                        li:nth-of-type(2) {
+                            color: #fff;
+                            background: $pink;
+                        }
+                    }
+                    &.select_3 {
+                        li:nth-of-type(3) {
+                            color: #fff;
+                            background: $pink;
+                        }
+                    }
+                }
+                h2 {
+                    font-size: 3.5rem;
+                    color: #fff;
+                    line-height: 1.3;
+                    letter-spacing: 2px;
+                }
+            }
+            .summary_points {
+                background: #de0080;
+                position: absolute;
+                top: 0px;
+                right: 10%;
+                height: 650px;
+                padding: 5% 20px;
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: bold;
+                    text-align: center;
+                    letter-spacing: 3px;
+                    margin: 0 0 30px;
+                    span {
+                        display: block;
+                        font-size: 1.2rem;
+                        font-weight: normal;
+                    }
+                }
+                .s_p_d {
+                    writing-mode: vertical-rl;
+                    word-break: break-word;
+                    margin: auto;
+                    color: #fff;
+                    font-size: 1.4rem;
+                }
+            }
+            .p_team {
+                position: absolute;
+                bottom: -30px;
+                right: 0;
+            }
+        }
+    }
+    section#outline {
+        .c_wrap {
+            @include m-w;
+            display: flex;
+            justify-content: flex-end;
+            margin: 50px auto 0;
+            .outline_l {
+                width: 35%;
+                border-left: 1px solid $pink;
+                border-right: 1px solid $pink;
+                padding: 0 2%;
+            }
+            .date_place {
+                width: 45%;
+                margin: 0 0 0 5%;
+                min-height: 220px;
+                .flex {
+                    display: flex;
+                    align-items: center;
+                    &.place {
+                        margin: -10px 0 0;
+                    }
+                    h4 {
+                        padding: 35px;
+                        border: 2px solid $pink;
+                        border-radius: 50%;
+                        color: $pink;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    section#overview {
+        .c_wrap {
+            .o_box.flex {
+                display: flex;
+                .flex_items {
+                    display: block;
+                    color: $pink;
+                    border: 1px solid $pink;
+                    opacity: 1;
+                    &.block {
+                        background: $pink;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

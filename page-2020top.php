@@ -265,6 +265,10 @@ get_header(); ?>
                 </div>
             </div>
     </section>
+    <section id="instagram" class="slide_fade10">
+        <?php echo do_shortcode('[instagram feed="140"]'); ?>
+
+    </section>
 </main>
 
 <?php get_footer(); ?>
