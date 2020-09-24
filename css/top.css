@@ -398,6 +398,7 @@ body {
   font-size: 1.4rem;
   font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.8;
+  word-wrap: break-word;
 }
 
 a:link {
@@ -533,6 +534,7 @@ header .c_wrap .h_left nav .sp_nav {
 
 section#f_menu .c_wrap {
   max-width: 1024px;
+  margin: 150px auto 0;
 }
 
 section#f_menu .c_wrap .nav_w .pc_nav {

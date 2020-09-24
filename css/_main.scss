@@ -43,6 +43,7 @@ body {
     font-size: 1.4rem;
     font-family: $sans-serif;
     line-height: 1.8;
+    word-wrap: break-word;
 }
 
 a {
@@ -162,6 +163,7 @@ header {
 section#f_menu {
     .c_wrap {
         @include m-w();
+        margin: 150px auto 0;
 
         .nav_w {
             .pc_nav {

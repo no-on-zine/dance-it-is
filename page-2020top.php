@@ -266,7 +266,7 @@ get_header(); ?>
             </div>
     </section>
     <section id="instagram" class="slide_fade10">
-        <?php echo do_shortcode('[instagram feed="140"]'); ?>
+        <?php echo do_shortcode('[instagram feed="13"]'); ?>
 
     </section>
 </main>
