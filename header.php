@@ -57,7 +57,7 @@
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="<?php echo home_url() ?>/dii2020/program2020">PROGRAM</a>
+                                <a href="<?php echo home_url() ?>/program2020">PROGRAM</a>
                             </li>
                             <li>｜</li>
                             <li>
@@ -80,7 +80,7 @@
                                 <a href="<?php echo home_url() ?>/dii2020/platform2020">PLATFORM</a>
                             </li>
                             <li>
-                                <a href="<?php echo home_url() ?>/dii2020/program2020">PROGRAM</a>
+                                <a href="<?php echo home_url() ?>/program2020">PROGRAM</a>
                             </li>
                             <li>
                                 <a href="<?php echo home_url() ?>/dii2020/program2020#schedule">SCHEDULE</a>

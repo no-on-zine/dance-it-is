@@ -1,6 +1,7 @@
 <?php //Template Name: 2020 PLATFORM
 get_header(); ?>
 
+<?php if( !post_password_required( $post->ID ) ) : ?>
 <main>
     <section id="m_v">
         <div class="w_box"></div>
@@ -56,7 +57,7 @@ get_header(); ?>
                         <a href="#">年間スケジュールを見る ></a>
                     </div>
                     <div class="detail">
-                        <a href="#">プログラム一覧を見る ></a>
+                        <a href="<?php echo home_url() ?>/program2020">プログラム一覧を見る ></a>
                     </div>
                 </div>
             </div>
@@ -91,7 +92,7 @@ get_header(); ?>
                                                     ></span>https://conte-sapporo.com/</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/hcd2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -127,7 +128,7 @@ get_header(); ?>
                                                     ></span>https://www.facebook.com/Kogane4422/</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/dh4422_2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -163,7 +164,7 @@ get_header(); ?>
                                                     ></span>https://www.standingchildren.com/dancecamp</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/dc2020//"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/dc2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -202,7 +203,7 @@ get_header(); ?>
                                                     ></span>https://db-dancebox.org/</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/db2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -229,7 +230,7 @@ get_header(); ?>
                                     </p>
                                     <div class="link">
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/fh2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -270,7 +271,7 @@ get_header(); ?>
                                     </p>
                                     <div class="link">
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/c32020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -301,7 +302,7 @@ get_header(); ?>
                                                     ></span>http://bodyartslabo.com</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/codex2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -337,7 +338,7 @@ get_header(); ?>
                                                     ></span>https://naokohaga.com/</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/dhs2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -376,7 +377,7 @@ get_header(); ?>
                                                     ></span>http://dancenewair.tokyo/</a>
                                         </div>
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/na2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>
@@ -424,5 +425,10 @@ get_header(); ?>
     </section>
 
 </main>
+<?php else: ?>
+<div class="custom_password_aria">
+    <?php echo get_the_password_form(); ?>
+</div>
+<?php endif; ?>
 
 <?php get_footer(); ?>

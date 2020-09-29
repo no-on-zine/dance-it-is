@@ -5,6 +5,7 @@ Template Post Type: program2020
 */
 get_header(); ?>
 
+<?php if( !post_password_required( $post->ID ) ) : ?>
 <main>
     <section id="m_v">
         <div class="w_box"></div>
@@ -43,10 +44,21 @@ get_header(); ?>
                 <?php echo $p_team; ?>
                 <?php endif;?>
             </div>
+
+            <?php $p_credit = get_field('p_credit');?>
+            <?php if(empty($p_credit)):?>
+
+            <?php else:?>
+            <div class="p_credit">
+                <?php echo $p_credit; ?>
+            </div>
+            <?php endif;?>
+
         </div>
     </section>
     <section id="outline">
         <div class="c_wrap">
+
             <div class="outline_l">
                 <?php $p_description = get_field('p_description');?>
                 <?php if(empty($p_description)):?>
@@ -55,79 +67,135 @@ get_header(); ?>
                 <?php echo $p_description; ?>
                 <?php endif;?>
             </div>
+
             <div class="date_place">
                 <div class="date flex">
                     <h4 class="fade">日程</h4>
-                    <div class="p_date_1">
+                    <div class="p_date">
+
+                        <?php $p_date_1 = get_field('p_date_1');?>
+                        <?php if(empty($p_date_1)):?>
+
+                        <?php else:?>
                         <p class="box_1">
-                            <?php $p_date_1 = get_field('p_date_1');?>
-                            <?php if(empty($p_date_1)):?>
-
-                            <?php else:?>
                             <?php echo $p_date_1; ?>
-                            <?php endif;?>
                         </p>
-                        <p class="box_2">
-                            <?php $p_date_2 = get_field('p_date_2');?>
-                            <?php if(empty($p_date_2)):?>
+                        <?php endif;?>
 
-                            <?php else:?>
+
+                        <?php $p_date_2 = get_field('p_date_2');?>
+                        <?php if(empty($p_date_2)):?>
+
+                        <?php else:?>
+                        <p class="box_2">
                             <?php echo $p_date_2; ?>
-                            <?php endif;?>
                         </p>
+                        <?php endif;?>
+
+
+                        <?php $p_date_3 = get_field('p_date_3');?>
+                        <?php if(empty($p_date_3)):?>
+
+                        <?php else:?>
+                        <p class="box_3">
+                            <?php echo $p_date_3; ?>
+                        </p>
+                        <?php endif;?>
+
                     </div>
                 </div>
+
                 <div class="place flex">
                     <h4 class="fade">会場</h4>
-                    <div class="p_place_1">
+                    <div class="p_place">
+
                         <div class="box_1">
                             <?php $p_place_1 = get_field('p_place_1');?>
                             <?php if(empty($p_place_1)):?>
 
                             <?php else:?>
-                            <?php echo $p_place_1; ?>
-                            <?php endif;?>
-                            <p class="p_address_1">
-                                <?php $p_address_1 = get_field('p_address_1');?>
-                                <?php if(empty($p_address_1)):?>
-
-                                <?php else:?>
-                                <?php echo $p_address_1; ?>
-                                <?php endif;?>
+                            <p class="place">
+                                <?php echo $p_place_1; ?>
                             </p>
-                            <div class="p_map_1">
-                                <?php $p_map_1 = get_field('p_map_1');?>
-                                <?php if(empty($p_map_1)):?>
+                            <?php endif;?>
 
-                                <?php else:?>
+                            <?php $p_address_1 = get_field('p_address_1');?>
+                            <?php if(empty($p_address_1)):?>
+
+                            <?php else:?>
+                            <p class="address">
+                                <?php echo $p_address_1; ?>
+                            </p>
+                            <?php endif;?>
+
+                            <?php $p_map_1 = get_field('p_map_1');?>
+                            <?php if(empty($p_map_1)):?>
+
+                            <?php else:?>
+                            <div class="map">
                                 <a href="<?php echo $p_map_1; ?>" target="_blank">MAP ></a>
-                                <?php endif;?>
                             </div>
+                            <?php endif;?>
                         </div>
+
                         <div class="box_2">
                             <?php $p_place_2 = get_field('p_place_2');?>
                             <?php if(empty($p_place_2)):?>
 
                             <?php else:?>
-                            <?php echo $p_place_2; ?>
-                            <?php endif;?>
-                            <p class="p_address_1">
-                                <?php $p_address_2 = get_field('p_address_2');?>
-                                <?php if(empty($p_address_2)):?>
-
-                                <?php else:?>
-                                <?php echo $p_address_2; ?>
-                                <?php endif;?>
+                            <p class="place">
+                                <?php echo $p_place_2; ?>
                             </p>
-                            <div class="p_map_1">
-                                <?php $p_map_2 = get_field('p_map_2');?>
-                                <?php if(empty($p_map_2)):?>
+                            <?php endif;?>
 
-                                <?php else:?>
+                            <?php $p_address_2 = get_field('p_address_2');?>
+                            <?php if(empty($p_address_2)):?>
+
+                            <?php else:?>
+                            <p class="address">
+                                <?php echo $p_address_2; ?>
+                            </p>
+                            <?php endif;?>
+
+                            <?php $p_map_2 = get_field('p_map_2');?>
+                            <?php if(empty($p_map_2)):?>
+
+                            <?php else:?>
+                            <div class="map">
                                 <a href="<?php echo $p_map_2; ?>" target="_blank">MAP ></a>
-                                <?php endif;?>
                             </div>
+                            <?php endif;?>
                         </div>
+
+                        <div class="box_3">
+                            <?php $p_place_3 = get_field('p_place_3');?>
+                            <?php if(empty($p_place_3)):?>
+
+                            <?php else:?>
+                            <p class="place">
+                                <?php echo $p_place_3; ?>
+                            </p>
+                            <?php endif;?>
+
+                            <?php $p_address_3 = get_field('p_address_3');?>
+                            <?php if(empty($p_address_3)):?>
+
+                            <?php else:?>
+                            <p class="address">
+                                <?php echo $p_address_3; ?>
+                            </p>
+                            <?php endif;?>
+
+                            <?php $p_map_3 = get_field('p_map_3');?>
+                            <?php if(empty($p_map_3)):?>
+
+                            <?php else:?>
+                            <div class="map">
+                                <a href="<?php echo $p_map_3; ?>" target="_blank">MAP ></a>
+                            </div>
+                            <?php endif;?>
+                        </div>
+
                     </div>
                 </div>
 
@@ -190,217 +258,10 @@ get_header(); ?>
             </div>
 
             <div class="contents">
-                <div class="box_1 flex">
-                    <div class="left">
-                        <?php $p_notice_1 = get_field('p_notice_1');?>
-                        <?php if(empty($p_notice_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5><?php echo $p_notice_1; ?></h5>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_terms_1 = get_field('p_terms_1');?>
-                        <?php if(empty($p_terms_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［募集条件］</h5>
-                            <p>
-                                <?php echo $p_terms_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_date_detail_1 = get_field('p_date_detail_1');?>
-                        <?php if(empty($p_date_detail_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［日程詳細］</h5>
-                            <p>
-                                <?php echo $p_date_detail_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_schedule_1 = get_field('p_schedule_1');?>
-                        <?php if(empty($p_schedule_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［プロジェクト全体スケジュール］</h5>
-                            <p>
-                                <?php echo $p_schedule_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_lecturer_1 = get_field('p_lecturer_1');?>
-                        <?php if(empty($p_lecturer_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［講師］</h5>
-                            <p>
-                                <?php echo $p_lecturer_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_shooting_1 = get_field('p_shooting_1');?>
-                        <?php if(empty($p_shooting_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［撮影］</h5>
-                            <p>
-                                <?php echo $p_shooting_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_fee_1 = get_field('p_fee_1');?>
-                        <?php if(empty($p_fee_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［参加費］</h5>
-                            <p>
-                                <?php echo $p_fee_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_capacity_1 = get_field('p_capacity_1');?>
-                        <?php if(empty($p_capacity_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［定員］</h5>
-                            <p>
-                                <?php echo $p_capacity_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_application_m_1 = get_field('p_application_m_1');?>
-                        <?php if(empty($p_application_m_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［応募方法］</h5>
-                            <p>
-                                <?php echo $p_application_m_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_period_1 = get_field('p_period_1');?>
-                        <?php if(empty($p_period_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［募集期間］</h5>
-                            <p>
-                                <?php echo $p_period_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_way_1 = get_field('p_way_1');?>
-                        <?php if(empty($p_way_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［方法］</h5>
-                            <p>
-                                <?php echo $p_way_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_target_1 = get_field('p_target_1');?>
-                        <?php if(empty($p_target_1)):?>
-                        <?php else:?>
-                        <div class="f_w">
-                            <h5>［対象］</h5>
-                            <p>
-                                <?php echo $p_target_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-
-                        <?php $p_inquiry_1 = get_field('p_inquiry_1');?>
-                        <?php if(empty($p_inquiry_1)):?>
-                        <?php else:?>
-                        <div class="f_w inquiry">
-                            <h5>問合・申込</h5>
-                            <p>
-                                <?php echo $p_inquiry_1; ?>
-                            </p>
-                        </div>
-                        <?php endif;?>
-                    </div>
-                    <div class="right">
-                        <div class="lecturer">
-                            <?php $p_l_photo_1_1 = get_field('p_l_photo_1_1');?>
-                            <?php if(empty($p_l_photo_1_1)):?>
-                            <?php else:?>
-                            <div class="i_w">
-                                <img src="<?php echo $p_l_photo_1_1; ?>">
-                            </div>
-                            <?php endif;?>
-
-                            <?php $p_l_name_1_1 = get_field('p_l_name_1_1');?>
-                            <?php if(empty($p_l_name_1_1)):?>
-                            <?php else:?>
-                            <h5><?php echo $p_l_name_1_1; ?></h5>
-                            <?php endif;?>
-
-                            <?php $p_l_profile_1_1 = get_field('p_l_profile_1_1');?>
-                            <?php if(empty($p_l_profile_1_1)):?>
-                            <?php else:?>
-                            <p><?php echo $p_l_profile_1_1; ?></p>
-                            <?php endif;?>
-                        </div>
-
-                        <div class="lecturer">
-                            <?php $p_l_photo_2_1 = get_field('p_l_photo_2_1');?>
-                            <?php if(empty($p_l_photo_2_1)):?>
-                            <?php else:?>
-                            <div class="i_w">
-                                <img src="<?php echo $p_l_photo_2_1; ?>">
-                            </div>
-                            <?php endif;?>
-
-                            <?php $p_l_name_2_1 = get_field('p_l_name_2_1');?>
-                            <?php if(empty($p_l_name_2_1)):?>
-                            <?php else:?>
-                            <h5><?php echo $p_l_name_2_1; ?></h5>
-                            <?php endif;?>
-
-                            <?php $p_l_profile_2_1 = get_field('p_l_profile_2_1');?>
-                            <?php if(empty($p_l_profile_2_1)):?>
-                            <?php else:?>
-                            <p><?php echo $p_l_profile_2_1; ?></p>
-                            <?php endif;?>
-                        </div>
-
-                        <div class="lecturer">
-                            <?php $p_l_photo_3_1 = get_field('p_l_photo_3_1');?>
-                            <?php if(empty($p_l_photo_3_1)):?>
-                            <?php else:?>
-                            <div class="i_w">
-                                <img src="<?php echo $p_l_photo_3_1; ?>">
-                            </div>
-                            <?php endif;?>
-
-                            <?php $p_l_name_3_1 = get_field('p_l_name_3_1');?>
-                            <?php if(empty($p_l_name_3_1)):?>
-                            <?php else:?>
-                            <h5><?php echo $p_l_name_3_1; ?></h5>
-                            <?php endif;?>
-
-                            <?php $p_l_profile_3_1 = get_field('p_l_profile_3_1');?>
-                            <?php if(empty($p_l_profile_3_1)):?>
-                            <?php else:?>
-                            <p><?php echo $p_l_profile_3_1; ?></p>
-                            <?php endif;?>
-                        </div>
-
-                    </div>
-                </div>
+                <?php the_content(); ?>
+                <?php include("inc/single-program/box_1.php"); ?>
+                <?php include("inc/single-program/box_2.php"); ?>
+                <?php include("inc/single-program/box_3.php"); ?>
             </div>
 
         </div>
@@ -408,7 +269,11 @@ get_header(); ?>
     </section>
 </main>
 
-
+<?php else: ?>
+<div class="custom_password_aria">
+    <?php echo get_the_password_form(); ?>
+</div>
+<?php endif; ?>
 
 
 

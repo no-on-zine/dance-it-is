@@ -859,7 +859,7 @@ main section#platform .c_wrap .p_list .p_list_items .i_w .item h4 {
 main section#platform .c_wrap .p_list .p_list_items .i_w .item h4 span {
   color: #fff;
   font-weight: normal;
-  padding: 4px 15px;
+  padding: 5px 15px 3px;
   display: inline-block;
   margin: 0 10px 0 0;
   line-height: 1;

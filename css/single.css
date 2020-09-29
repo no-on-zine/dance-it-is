@@ -747,10 +747,19 @@ main #m_v .c_wrap .title_area div ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 20px;
 }
 
 main #m_v .c_wrap .title_area div ul li {
   background: #fff;
+  font-weight: bold;
+  color: #7b7473;
+  letter-spacing: 2px;
+  padding: 0 5px;
+}
+
+main #m_v .c_wrap .title_area div ul li:nth-of-type(2) {
+  margin: 0 10px;
 }
 
 main #m_v .c_wrap .title_area div.select_1 li:nth-of-type(1) {
@@ -813,6 +822,13 @@ main #m_v .c_wrap .p_team {
   right: 0;
 }
 
+main #m_v .c_wrap .p_credit {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  bottom: -25px;
+}
+
 main section#outline .c_wrap {
   max-width: 1024px;
   display: -webkit-box;
@@ -832,7 +848,7 @@ main section#outline .c_wrap .outline_l {
 }
 
 main section#outline .c_wrap .date_place {
-  width: 45%;
+  width: 60%;
   margin: 0 0 0 5%;
   min-height: 220px;
 }
@@ -856,6 +872,33 @@ main section#outline .c_wrap .date_place .flex h4 {
   border-radius: 50%;
   color: #EC008C;
   font-size: 1.8rem;
+  word-break: keep-all;
+}
+
+main section#outline .c_wrap .date_place .flex .p_date {
+  font-size: 1.7rem;
+  margin: 0 0 0 30px;
+}
+
+main section#outline .c_wrap .date_place .flex .p_place {
+  font-size: 1.7rem;
+  margin: 0 0 0 30px;
+  position: relative;
+}
+
+main section#outline .c_wrap .date_place .flex .p_place .address {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+main section#outline .c_wrap .date_place .flex .p_place .map {
+  position: absolute;
+  bottom: -60px;
+}
+
+main section#outline .c_wrap .date_place .flex .p_place .map a {
+  border: 1px solid #000;
+  padding: 6px 17px;
 }
 
 main section#overview .c_wrap {
@@ -883,6 +926,7 @@ main section#overview .c_wrap .o_box.flex .flex_items {
   margin: 0 2% 0 0;
   padding: 15px 10px;
   font-size: 1.8rem;
+  cursor: pointer;
 }
 
 main section#overview .c_wrap .o_box.flex .flex_items:nth-of-type(3n) {
@@ -907,6 +951,10 @@ main section#overview .c_wrap .contents .flex {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+main section#overview .c_wrap .contents .flex.none {
+  display: none;
 }
 
 main section#overview .c_wrap .contents .flex .left {
@@ -953,5 +1001,166 @@ main section#overview .c_wrap .contents .flex .right .lecturer h5 {
   font-size: 1.6rem;
   font-weight: bold;
   margin: 10px 0;
+}
+
+body.archive section#p_list .c_wrap {
+  max-width: 1024px;
+}
+
+body.archive section#p_list .c_wrap .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body.archive section#p_list .c_wrap .list .post {
+  width: 45%;
+  border-left: 2px solid #000;
+  padding: 0 0 0 20px;
+  margin: 0 0 100px;
+  position: relative;
+}
+
+body.archive section#p_list .c_wrap .list .post:nth-of-type(odd) {
+  margin: 0 10% 100px 0;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w {
+  display: block;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin: 0 0 30px;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status {
+  width: 50%;
+  min-height: 75px;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status ul li {
+  color: #fff;
+  background: #ccc;
+  width: 30%;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status ul li:nth-of-type(2) {
+  margin: 0 10px;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status.select_1 li:nth-of-type(1) {
+  background: #000;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status.select_2 li:nth-of-type(2) {
+  background: #000;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .p_status.select_3 li:nth-of-type(3) {
+  background: #000;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_h .level {
+  width: 46%;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t {
+  position: relative;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t .prefecture {
+  position: absolute;
+  right: -16%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  background: #fff;
+  border-top: 1px solid #000;
+  bottom: -8%;
+  font-weight: bold;
+  width: 180px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t .prefecture.red {
+  color: #ED0018;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t .prefecture.blue {
+  color: #0012B3;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t .prefecture.green {
+  color: #008033;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_t .prefecture.yellow {
+  color: #FFB61C;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .post_name {
+  font-size: 2.2rem;
+  line-height: 1.5;
+  margin: 30px 0;
+  min-height: 110px;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .summary_points h3 {
+  margin: 20px 0;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .summary_points h3 span {
+  font-weight: bold;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  padding: 0 15px;
+  margin: 0 15px 0 0;
+}
+
+body.archive section#p_list .c_wrap .list .post a.post_w .summary_points p {
+  font-weight: bold;
+  line-height: 1.5;
+  padding: 0 0 0 20px;
+}
+
+body.archive section#p_list .c_wrap .list .post .team {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-weight: bold;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: -3%;
+  padding: 20px 0 0;
 }
 /*# sourceMappingURL=single.css.map */

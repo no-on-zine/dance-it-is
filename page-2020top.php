@@ -187,11 +187,9 @@ get_header(); ?>
                     <h3>SUMMARY POINT｜</h3>
                     <ul>
                         <li class="s_0 blank">...</li>
-                        <li class="s_1">振付家として、何が自分に必要なのかを自ら考え企画する。<br> これからのアーティストは自分で企画して、実施する力が必要、その力を育てる。
-                            <br> その企画実施を支えるためアドバイザー、会場、テクニカル、予算のフルサポート。
-                        </li>
-                        <li class="s_2">2番目のテキスト</li>
-                        <li class="s_3">3番目のテキスト</li>
+                        <li class="s_1"><?php echo get_field ('summary_points',293);?></li>
+                        <li class="s_2"><?php echo get_field ('summary_points',739);?></li>
+                        <li class="s_3"><?php echo get_field ('summary_points',886);?></li>
                         <li class="s_4">4番目のテキスト</li>
                         <li class="s_5">5番目のテキスト</li>
                         <li class="s_6">6番目のテキスト</li>
