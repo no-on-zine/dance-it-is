@@ -12,6 +12,17 @@ main {
             position: absolute;
             z-index: 100;
             top: -1px;
+
+            &.title {
+                width: auto;
+                bottom: -1px;
+                right: -1px;
+                top: unset;
+                left: unset;
+                text-align: right;
+                padding: 0 20px 0 50px;
+                font-size: 2rem;
+            }
         }
     }
 
@@ -224,5 +235,17 @@ main {
             }
         }
 
+    }
+}
+
+body.error404 {
+    main {
+        section#nf {
+            .c_wrap {
+                @include m-w;
+                margin: 100px auto;
+                font-weight: bold;
+            }
+        }
     }
 }

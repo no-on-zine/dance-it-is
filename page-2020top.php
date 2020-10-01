@@ -184,7 +184,7 @@ get_header(); ?>
             </div>
             <div class="p_detail">
                 <div class="summary_point">
-                    <h3>SUMMARY POINT｜</h3>
+                    <h3>SUMMARY POINTS｜</h3>
                     <ul>
                         <li class="s_0 blank">...</li>
                         <li class="s_1"><?php echo get_field ('summary_points',293);?></li>

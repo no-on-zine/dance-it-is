@@ -11,7 +11,7 @@ get_header(); ?>
         <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
-                <?php the_post_thumbnail(); ?>
+                <img src="<?php the_field('p_thumb'); ?>">      
             </div>
             <div class="title_area">
                 <div class="<?php the_field('p_status'); ?>">
@@ -26,14 +26,16 @@ get_header(); ?>
                 </h2>
             </div>
             <div class="summary_points">
-                <h3>｜SUMMARY POINTS｜<span>各プログラムの特色</span></h3>
+                <h3><span>SUMMARY POINTS</span><span>プログラムの特色</span></h3>
                 <div class="s_p_d">
-                    <?php $summary_points = get_field('summary_points');?>
-                    <?php if(empty($summary_points)):?>
-
-                    <?php else:?>
-                    <?php echo $summary_points; ?>
-                    <?php endif;?>
+                    <?php $summary_points_1 = get_field('summary_points_1');?>
+                    <?php $summary_points_2 = get_field('summary_points_2');?>
+                    <?php $summary_points_3 = get_field('summary_points_3');?>
+                    <ul>
+                        <li><?php echo $summary_points_1; ?></li>
+                        <li><?php echo $summary_points_2; ?></li>
+                        <li><?php echo $summary_points_3; ?></li>
+                    </ul>
                 </div>
             </div>
             <div class="p_team">
@@ -212,7 +214,6 @@ get_header(); ?>
                 <?php else:?>
                 <div class="p_name_1 flex_items box_1">
                     <?php echo $p_name_1; ?>
-                    <p>/募集概要</p>
                 </div>
                 <?php endif;?>
 
@@ -222,7 +223,6 @@ get_header(); ?>
                 <?php else:?>
                 <div class="p_name_2 flex_items box_2">
                     <?php echo $p_name_2; ?>
-                    <p>/募集概要</p>
                 </div>
                 <?php endif;?>
 
@@ -232,7 +232,6 @@ get_header(); ?>
                 <?php else:?>
                 <div class="p_name_3 flex_items box_3">
                     <?php echo $p_name_3; ?>
-                    <p>/募集概要</p>
                 </div>
                 <?php endif;?>
 
@@ -242,7 +241,6 @@ get_header(); ?>
                 <?php else:?>
                 <div class="p_name_4 flex_items box_4">
                     <?php echo $p_name_4; ?>
-                    <p>/募集概要</p>
                 </div>
                 <?php endif;?>
 
@@ -252,7 +250,6 @@ get_header(); ?>
                 <?php else:?>
                 <div class="p_name_5 flex_items box_5">
                     <?php echo $p_name_5; ?>
-                    <p>/募集概要</p>
                 </div>
                 <?php endif;?>
             </div>

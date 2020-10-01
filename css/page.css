@@ -537,6 +537,10 @@ section#f_menu .c_wrap {
   margin: 150px auto 0;
 }
 
+section#f_menu .c_wrap .nav_w {
+  display: none;
+}
+
 section#f_menu .c_wrap .nav_w .pc_nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,6 +575,7 @@ section#f_menu .c_wrap .menu_w {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: none;
 }
 
 section#f_menu .c_wrap .menu_w ul:nth-of-type(2) {
@@ -589,6 +594,11 @@ section#f_menu .c_wrap .info_b {
   line-height: 1.5;
 }
 
+section#f_menu .c_wrap .info_b.info_4 {
+  border-top: none;
+  padding: 0 0 30px;
+}
+
 section#f_menu .c_wrap .info_3 ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -604,7 +614,33 @@ section#f_menu .c_wrap .info_3 ul {
 }
 
 section#f_menu .c_wrap .info_3 ul li {
-  margin: 0 2%;
+  margin: 0 3% 0 0;
+}
+
+section#f_menu .c_wrap .info_3 ul li:nth-of-type(8) {
+  margin: 0;
+}
+
+section#f_menu .c_wrap .info_4 ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#f_menu .c_wrap .info_4 ul li {
+  width: 11%;
+}
+
+section#f_menu .c_wrap .info_4 ul li:first-child {
+  margin: 0 3% 0 0;
 }
 
 footer {
@@ -649,9 +685,8 @@ footer .c_wrap .flex .sns ul li {
   margin: 0 0 0 15px;
 }
 
-footer .c_wrap .flex .f_logo {
-  max-width: 100px;
-  margin: 0 0 0 20px;
+footer .c_wrap .copyright {
+  font-size: 1rem;
 }
 
 main #m_v {
@@ -665,6 +700,17 @@ main #m_v .w_box {
   position: absolute;
   z-index: 100;
   top: -1px;
+}
+
+main #m_v .w_box.title {
+  width: auto;
+  bottom: -1px;
+  right: -1px;
+  top: unset;
+  left: unset;
+  text-align: right;
+  padding: 0 20px 0 50px;
+  font-size: 2rem;
 }
 
 main section#about_project .c_wrap {
@@ -883,5 +929,11 @@ main section#platform .c_wrap .p_list .p_list_items .i_w .item h4 span.yellow {
 
 main section#platform .c_wrap .p_list .p_list_items .i_w .item .t_name {
   font-size: 2.2rem;
+}
+
+body.error404 main section#nf .c_wrap {
+  max-width: 1024px;
+  margin: 100px auto;
+  font-weight: bold;
 }
 /*# sourceMappingURL=page.css.map */

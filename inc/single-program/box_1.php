@@ -107,7 +107,7 @@
         </div>
         <?php endif;?>
 
-        
+
 
         <?php $p_selection_1 = get_field('p_selection_1');?>
         <?php if(empty($p_selection_1)):?>
@@ -141,6 +141,14 @@
             </p>
         </div>
         <?php endif;?>
+        <div class="link f_w">
+            <div class="detail">
+                <a href="<?php echo home_url() ?>/dii2020/platform2020">プラットフォームとは &gt;</a>
+            </div>
+            <div class="detail">
+                <a href="<?php echo home_url() ?>/program2020#schedule">年間スケジュールを見る &gt;</a>
+            </div>
+        </div>
     </div>
     <div class="right">
         <div class="lecturer">

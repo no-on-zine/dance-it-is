@@ -61,15 +61,15 @@
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="<?php echo home_url() ?>/dii2020/program2020#schedule">SCHEDULE</a>
+                                <a href="<?php echo home_url() ?>/program2020#schedule">SCHEDULE</a>
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="<?php echo home_url() ?>/magazine">MAGAZINE</a>
+                                <a href="#">MAGAZINE</a>
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="<?php echo home_url() ?>/archive">ARCHIVE</a>
+                                <a href="#">ARCHIVE</a>
                             </li>
                         </ul>
                         <ul class="sp_nav">
@@ -83,7 +83,7 @@
                                 <a href="<?php echo home_url() ?>/program2020">PROGRAM</a>
                             </li>
                             <li>
-                                <a href="<?php echo home_url() ?>/dii2020/program2020#schedule">SCHEDULE</a>
+                                <a href="<?php echo home_url() ?>/program2020#schedule">SCHEDULE</a>
                             </li>
                             <li>
                                 <a href="<?php echo home_url() ?>/magazine">MAGAZINE</a>

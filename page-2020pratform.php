@@ -9,6 +9,7 @@ get_header(); ?>
             <div class="thum">
                 <?php the_post_thumbnail(); ?>
             </div>
+            <div class="w_box title">プラットフォーム</div>
         </div>
     </section>
     <section id="about_project">
@@ -38,7 +39,7 @@ get_header(); ?>
                 <div class="flex">
                     <div class="left green">クリエイティブスタディ<span>（創造環境パートナー）</span></div>
                     <p>
-                        ダンスに関わる専門的な団体と連携して、レクチャーやマネジメント技法の習得を通して、コンテンポラリーダンスの創造環境全体の向上に寄与する人材の育成を行う。
+                        ダンスに関わる専門的な団体と連携し、レクチャーやマネジメント技法の習得を通して、コンテンポラリーダンスの創造環境全体の向上に寄与する人材の育成を行う。
                     </p>
                 </div>
                 <div class="flex">
@@ -252,7 +253,7 @@ get_header(); ?>
                             <div class="flex">
                                 <div class="left">
                                     <h4><span class="blue">札幌・京都</span>札幌 / 京都 クリエイティブパートナー</h4>
-                                    <p class="t_name">C 3 / Contact Choreograph Crossing<br>
+                                    <p class="t_name">C<sup>3</sup> / Contact Choreograph Crossing<br>
                                         事務局：一般社団法人ダンスアンドエンヴァイロメント
                                     </p>
                                 </div>
@@ -265,9 +266,7 @@ get_header(); ?>
                             <div class="flex">
                                 <div class="left">
                                     <p>
-                                        京都を拠点とするコンタクト・インプロヴァイザー(以下CI
-                                        )・アーティストと札幌を拠点とするCIアーティストが2018年より地域間交流を開始。今回の地域間交流を促す人材育成事業の実施のためにContact、Choreograph、CroosingをキーワードにC
-                                        3 (シースリー)を結成した。
+                                        京都を拠点とするコンタクト・インプロヴァイザー(以下CI)・アーティストと札幌を拠点とするCIアーティストが2018年より地域間交流を開始。今回の地域間交流を促す人材育成事業の実施のためにContact、Choreograph、CroosingをキーワードにC<sup>3</sup>(シースリー)を結成した。
                                     </p>
                                     <div class="link">
                                         <div class="detail">
@@ -287,19 +286,19 @@ get_header(); ?>
                             <div class="flex">
                                 <div class="left">
                                     <h4><span class="blue">福　岡</span>福岡クリエイティブパートナー</h4>
-                                    <p class="t_name">ボディー・アーツ・ラボラトリー、NPO法人コデックス</p>
+                                    <p class="t_name">山崎広太／フルイドハグハグ、NPO法人コデックス</p>
                                 </div>
                             </div>
                             <div class="flex">
                                 <div class="left">
                                     <p>
-                                        ボディ・アーツ・ラボラトリー：社会におけるアーティストのためのオーガニゼーションとして2008年に設立。プログラム・ディレクター：山崎広太。http://bodyartslabo.com/
+                                        山崎広太／フルイドハグハグ：社会におけるアーティストのためのオーガニゼーションとして2008年に設立。プログラム・ディレクター：山崎広太。<br>
                                         NPO法人コデックス：福岡を拠点に社会とアート、特にパフォーミングアーツとの新たな関係を創造し、誰でもが創造することの楽しさ、素晴らしさを享受し、生きる力を得ることの出来る、自由で豊かな地域社会の実現に貢献することを目的として活動する特定非営利活動法人です。2008年から毎年「フリンジ（辺境）から世界へ」の理念のもとに福岡ダンスフリンジフェスティバルを開催。
                                     </p>
                                     <div class="link">
                                         <div class="detail">
-                                            <a href="http://bodyartslabo.com" target="_blank"><span>団体サイト
-                                                    ></span>http://bodyartslabo.com</a>
+                                            <a href="https://www.kotayamazaki.com/" target="_blank"><span>団体サイト
+                                                    ></span>https://www.kotayamazaki.com/</a>
                                         </div>
                                         <div class="detail">
                                             <a href="<?php echo home_url() ?>/program2020/codex2020/"><span>プログラム詳細を見る

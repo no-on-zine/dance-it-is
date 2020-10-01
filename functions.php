@@ -15,8 +15,8 @@ function jcdn_setup() {
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'jcdn-featured-image', 2000, 1200, true );
 	add_image_size( 'jcdn-thumbnail-avatar', 100, 100, true );
-	add_image_size( 'top_tmb', 1200, 900, true );
-	add_image_size( 'single_tmb', 725, 430, true );
+	add_image_size( 'top_tmb', 600, 420, true );
+	add_image_size( 'single_tmb', 800, 600, true );
 	add_image_size( 'side_tmb', 315, 160, true );
 
 	// Set the default content width.
@@ -266,22 +266,26 @@ function add_files() {
 wp_enqueue_script( 'jquery.inview.min', get_template_directory_uri() . '/js/jquery.inview.min.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 'jquery.simpleTicker', get_template_directory_uri() . '/js/jquery.simpleTicker.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 't.min', get_template_directory_uri() . '/js/t.min.js', array( 'jquery' ), '1.0.1', false );
-wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.8', false );
+wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.9', false );
 
 // CSS
 
 
 if ( ( is_page_template( array('page-2020top.php','page-2021top.php','page-2022top.php')) ) ) {
-	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.0.3' );
+	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.0.7' );
 	  wp_enqueue_style( 'ticker', get_template_directory_uri() . '/css/jquery.simpleTicker.css', "", '1.0.0' );
     }
     
     elseif ( is_page() ) {
-	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.0.2' );
+	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.0.7' );
     }
 		
     elseif ( is_archive() || is_single() ) {
-	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.0.2' );
+	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.0.7' );
+	}
+
+	else {
+		wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.0.7' );
 	}
 	
 	wp_enqueue_style( 'font', 'https://use.typekit.net/osf7foa.css', "", '1.0.0' );
