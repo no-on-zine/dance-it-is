@@ -55,7 +55,7 @@ get_header(); ?>
                 </div>
                 <div class="link">
                     <div class="detail">
-                        <a href="#">年間スケジュールを見る ></a>
+                        <a href="<?php echo home_url() ?>/program2020#schedule">年間スケジュールを見る ></a>
                     </div>
                     <div class="detail">
                         <a href="<?php echo home_url() ?>/program2020">プログラム一覧を見る ></a>
@@ -403,7 +403,7 @@ get_header(); ?>
                                     <p class="t_name">ダンスでいこう2020運営チーム</p>
                                     <div class="link">
                                         <div class="detail">
-                                            <a href="<?php echo home_url() ?>/program2020/sapporo-choreo20/"><span>プログラム詳細を見る
+                                            <a href="<?php echo home_url() ?>/program2020/kyoto2020/"><span>プログラム詳細を見る
                                                     ></span></a>
                                         </div>
                                     </div>

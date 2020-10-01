@@ -114,7 +114,7 @@ header {
         padding: 30px 2% 10px;
 
         .h_right {
-            width: 25%;
+            width: 20%;
 
             h1 {
                 a {
@@ -124,7 +124,7 @@ header {
         }
 
         .h_left {
-            width: 65%;
+            width: 70%;
 
             .sns {
                 ul {
@@ -255,12 +255,12 @@ footer {
     letter-spacing: 1.5px;
 
     .c_wrap {
-        padding: 2%;
+        padding: 2.1%;
 
         .flex {
             @include flex(flex, nowrap, center);
             align-items: center;
-            margin: 20px 0;
+            margin: 0 0 20px;
 
             .sns {
                 ul {
@@ -277,6 +277,7 @@ footer {
 
         .copyright {
             font-size: 1rem;
+            line-height: 1;
         }
     }
 }

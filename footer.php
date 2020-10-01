@@ -100,36 +100,44 @@
             京都芸術センター（Co-programカテゴリーD「KACセレクション」採択企画）
         </div>
         <div class="info_2 info_b slide_fade10">
-            事務局：NPO法人ジャパン・コンテンポラリーダンス・ネットワーク（JCDN）<br> 統括：佐東範一　運営：神前沙織、榊原愛
+            事務局・総合問合：NPO法人ジャパン・コンテンポラリーダンス・ネットワーク（JCDN）<br> 統括：佐東範一　運営：神前沙織、榊原愛
             <br> 〒600-8092 京都府京都市下京区神明町241オパス四条503 <br> Tel: 075-361-4685&nbsp;&nbsp;&nbsp;&nbsp;Fax:
-            075-361-6225&nbsp;&nbsp;&nbsp;&nbsp;MAIL：info@jcdn.org&nbsp;&nbsp;&nbsp;&nbsp;Web: http://www.jcdn.org
+            075-361-6225&nbsp;&nbsp;&nbsp;&nbsp;MAIL：info@jcdn.org&nbsp;&nbsp;&nbsp;&nbsp;Web: <a
+                href="http://www.jcdn.org" target="_blank">http://www.jcdn.org</a>
         </div>
         <div class="info_3 info_b slide_fade10">
             <ul>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_1.png" alt="文化庁">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_1.png?<?php echo date("YmdHis");?>"
+                        alt="文化庁">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_2.png"
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_2.png?<?php echo date("YmdHis");?>"
                         alt="NPO法人ジャパン・コンテンポラリーダンス・ネットワーク（JCDN）">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_3.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_3.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_4.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_4.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_5.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_5.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_6.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_6.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_7.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_7.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_8.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_8.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
 
             </ul>
@@ -137,10 +145,12 @@
         <div class="info_4 info_b slide_fade10">
             <ul>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_9.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_9.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
                 <li>
-                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_10.png" alt="">
+                    <img src="<?php bloginfo('template_url'); ?>/images/common/f_10.png?<?php echo date("YmdHis");?>"
+                        alt="">
                 </li>
             </ul>
         </div>

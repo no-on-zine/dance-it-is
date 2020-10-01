@@ -480,7 +480,7 @@ header .c_wrap {
 }
 
 header .c_wrap .h_right {
-  width: 25%;
+  width: 20%;
 }
 
 header .c_wrap .h_right h1 a {
@@ -488,7 +488,7 @@ header .c_wrap .h_right h1 a {
 }
 
 header .c_wrap .h_left {
-  width: 65%;
+  width: 70%;
 }
 
 header .c_wrap .h_left .sns ul {
@@ -651,7 +651,7 @@ footer {
 }
 
 footer .c_wrap {
-  padding: 2%;
+  padding: 2.1%;
 }
 
 footer .c_wrap .flex {
@@ -666,7 +666,7 @@ footer .c_wrap .flex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20px 0;
+  margin: 0 0 20px;
 }
 
 footer .c_wrap .flex .sns ul {
@@ -687,6 +687,7 @@ footer .c_wrap .flex .sns ul li {
 
 footer .c_wrap .copyright {
   font-size: 1rem;
+  line-height: 1;
 }
 
 .fade,
@@ -783,6 +784,11 @@ main #m_v .c_wrap {
   position: relative;
 }
 
+main #m_v .c_wrap .thum {
+  position: relative;
+  overflow: hidden;
+}
+
 main #m_v .c_wrap .title_area {
   position: absolute;
   bottom: 10%;
@@ -836,7 +842,6 @@ main #m_v .c_wrap .summary_points {
   position: absolute;
   top: 0px;
   right: 15%;
-  height: 100%;
   padding: 40px 20px 0;
 }
 
@@ -865,13 +870,13 @@ main #m_v .c_wrap .summary_points .s_p_d {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  word-break: break-word;
   margin: auto;
   color: #fff;
 }
 
 main #m_v .c_wrap .summary_points .s_p_d ul li {
   padding: 0 0 130px;
+  height: 40vw;
 }
 
 main #m_v .c_wrap .summary_points .s_p_d ul li:nth-of-type(2) {

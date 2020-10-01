@@ -1,85 +1,117 @@
 @import "reset";
 @import "main";
+
 main {
     #m_v {
         position: relative;
+
         .w_box {
             background: #fff;
-            width: 100px;
+            width: 8.6%;
             height: 25px;
             position: absolute;
             z-index: 100;
             top: -1px;
         }
+
         .c_wrap {
             display: flex;
             align-items: flex-end;
+            padding: 0 2% 0 0;
+
             .text {
                 writing-mode: vertical-rl;
                 font-weight: bold;
                 padding: 0 15px;
                 font-size: 1.6rem;
             }
+
             .slider {
                 position: relative;
-                .m_v_text {
-                    position: absolute;
-                    bottom: 10%;
-                    width: 65%;
-                    right: 5%;
-                }
+
                 .metaslider {
                     .flexslider {
                         margin: 0;
                     }
+
                     .flex-control-nav {
                         bottom: 10px;
+                    }
+
+                    .caption-wrap {
+                        position: absolute;
+                        bottom: -15px;
+                        right: 0;
+                        background: none;
+                        color: #000;
+                        opacity: 1;
+                        margin: 0;
+                        display: block;
+                        width: auto;
+                        line-height: 1;
+                        font-size: 1rem;
+                        text-align: right;
+
+                        .caption {
+                            padding: 0;
+                            word-wrap: break-word;
+                        }
                     }
                 }
             }
         }
     }
+
     section#news {
         .c_wrap {
             position: relative;
             margin: 30px auto;
+
             .flex {
                 margin: 0 0 0 60px;
+
                 .news_h {
                     font-weight: bold;
                     font-size: 2.2rem;
                     letter-spacing: 3px;
                     float: left;
                 }
+
                 #ticker-fade {
-                    width: 60%;
+                    width: 80%;
                     border: none;
                     font-size: 1.7rem;
                     padding: 4px 0 30px 0;
                     margin: 0;
                 }
             }
+
             .more {
                 max-width: 90px;
                 position: absolute;
                 top: 0;
-                right: 1%;
+                right: 2%;
             }
         }
     }
+
     section#about_project {
         .c_wrap {
             @include m-w;
             margin: 70px auto;
+
             .c_text {
                 font-size: 1.6rem;
+
                 h2 {
                     font-size: 4rem;
                     font-weight: bold;
                     letter-spacing: 4px;
                 }
+
                 .detail {
                     margin: 15px 0 0;
+
                     a {
                         border: 1px solid #000;
                         padding: 6px 17px;
@@ -88,6 +120,7 @@ main {
             }
         }
     }
+
     section#platform {
         .c_wrap {
             background-color: #f1e9e0;
@@ -96,28 +129,35 @@ main {
             background-size: 46%, 100%;
             background-repeat: no-repeat;
             margin: 70px auto;
+
             .flex {
                 @include m-w;
                 @include flex;
                 margin: auto;
                 padding: 50px 0;
+
                 .c_text {
                     width: 30%;
                     font-size: 1.6rem;
+
                     h2 {
                         font-size: 4rem;
                         font-weight: bold;
                         letter-spacing: 4px;
                     }
+
                     .detail {
                         margin: 25px 0;
+
                         a {
                             border: 1px solid #000;
                             padding: 6px 17px;
                         }
                     }
+
                     .bold {
                         font-weight: bold;
+
                         h3 {
                             font-size: 1.8rem;
                             background: url(../images/top/ex.png) no-repeat 0 center/20px;
@@ -125,11 +165,14 @@ main {
                         }
                     }
                 }
+
                 .p_list {
                     width: 65%;
+
                     .p_list_items {
                         @include flex(flex, nowrap, flex-start);
                         margin: 0 0 30px;
+
                         h3 {
                             writing-mode: vertical-rl;
                             font-weight: bold;
@@ -137,17 +180,22 @@ main {
                             line-height: 1.5;
                             border-right: 1px solid #000;
                             padding: 0 15px 0 0;
+
                             span {
                                 font-size: 1.2rem;
                                 display: block;
                             }
                         }
+
                         .i_w {
                             margin: 0 0 0 20px;
+
                             .item {
                                 margin: 0 0 20px;
+
                                 h4 {
                                     font-weight: bold;
+
                                     span {
                                         color: #fff;
                                         font-weight: normal;
@@ -155,20 +203,25 @@ main {
                                         display: inline-block;
                                         margin: 0 10px 0 0;
                                         line-height: 1;
+
                                         &.red {
                                             background: $red;
                                         }
+
                                         &.blue {
                                             background: $blue;
                                         }
+
                                         &.green {
                                             background: $green;
                                         }
+
                                         &.yellow {
                                             background: $yellow;
                                         }
                                     }
                                 }
+
                                 p {
                                     font-size: 2.2rem;
                                 }
@@ -179,50 +232,199 @@ main {
             }
         }
     }
+
     section#program {
         .c_wrap {
             .steps {
                 @include m-w;
                 margin: auto;
-                h2 {
-                    font-size: 4rem;
-                    font-weight: bold;
-                    letter-spacing: 4px;
+
+                .c_text {
+                    margin: 0 0 30px;
+
+                    h2 {
+                        font-size: 4rem;
+                        font-weight: bold;
+                        letter-spacing: 4px;
+                    }
+
+                    p {
+                        margin: 40px 0 0;
+                    }
                 }
-            }
-            .p_detail {
-                .summary_point {
-                    @include m-w;
-                    margin: auto;
+
+                .dc {
                     ul {
                         li {
+                            margin: 0 0 10px;
+
+                            span {
+                                color: #fff;
+                                background: #EC008C;
+                                padding: 0 5px;
+                                margin: 0 10px 0 0;
+                                min-width: 60px;
+                                display: inline-block;
+                                text-align: center;
+                                line-height: 1.4;
+                            }
+                        }
+                    }
+                }
+
+                .detail {
+                    margin: 25px 0;
+
+                    a {
+                        border: 1px solid #000;
+                        padding: 6px 17px;
+                    }
+                }
+            }
+
+            .p_detail {
+                margin: 100px 0 0;
+
+                .summary_point {
+                    @include m-w;
+                    margin: 70px auto 0;
+                    display: flex;
+                    min-height: 150px;
+                    display: none;
+
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        line-height: 1.5;
+                        flex: 1;
+                    }
+
+                    ul {
+                        color: $pink;
+                        font-weight: bold;
+                        flex: 3.7;
+
+                        li {
                             display: none;
+
                             &.blank {
                                 display: block;
                             }
+
                             &.none {
                                 display: none !important;
                             }
                         }
                     }
                 }
+
                 .flex {
                     @include flex;
+
                     .flex_items {
                         width: 19.5%;
+                        margin: 0 0 60px;
+
                         .img_w {
-                            img {
-                                transition: filter 0.3s ease;
-                                cursor: pointer;
+                            position: relative;
+
+                            a:hover {
+                                opacity: 1;
                             }
-                            &:hover {
-                                filter: hue-rotate(70deg)brightness(0.5)saturate(6.5);
-                                transition: filter 0.3s ease;
+
+                            img {
+                                transition: opacity 0.3s ease;
+                                cursor: pointer;
+                                height: 13vw;
+                                object-fit: cover;
+
+                                &.h_img {
+                                    position: absolute;
+                                    opacity: 0;
+                                    left: 0;
+                                    top: 0;
+                                    width: 100%;
+
+                                    &:hover {
+                                        opacity: 0.7;
+                                    }
+                                }
                             }
                         }
+
+                        .title {
+                            font-weight: bold;
+                            text-align: center;
+                            min-height: 60px;
+                            margin: 10px 0 0;
+                            line-height: 1.2;
+                        }
+
+                        .level {
+                            width: 80%;
+                            margin: 0 auto 20px;
+                        }
+
+                        .p_status {
+
+                            ul {
+                                @include flex(flex, wrap, center);
+                                width: 80%;
+                                margin: auto;
+
+                                li {
+                                    color: #fff;
+                                    background: #ccc;
+                                    width: 31%;
+                                    text-align: center;
+                                    font-size: 1.2rem;
+
+                                    &:nth-of-type(2) {
+                                        margin: 0 2%;
+                                    }
+                                }
+                            }
+
+                            &.select_1 {
+                                li:nth-of-type(1) {
+                                    background: #000;
+                                }
+                            }
+
+                            &.select_2 {
+                                li:nth-of-type(2) {
+                                    background: #000;
+                                }
+                            }
+
+                            &.select_3 {
+                                li:nth-of-type(3) {
+                                    background: #000;
+                                }
+                            }
+                        }
+
                     }
                 }
             }
         }
     }
+
+    section#instagram {
+        .c_wrap {
+            @include m-w;
+            margin: 70px auto;
+
+            .c_text {
+                h2 {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    margin: 0 0 40px;
+                }
+            }
+        }
+    }
+
 }

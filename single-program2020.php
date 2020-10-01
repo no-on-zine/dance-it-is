@@ -11,7 +11,20 @@ get_header(); ?>
         <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
-                <img src="<?php the_field('p_thumb'); ?>">      
+                <img src="<?php the_field('p_thumb'); ?>">
+                <div class="summary_points">
+                <h3><span>SUMMARY POINTS</span><span>プログラムの特色</span></h3>
+                <div class="s_p_d">
+                    <?php $summary_points_1 = get_field('summary_points_1');?>
+                    <?php $summary_points_2 = get_field('summary_points_2');?>
+                    <?php $summary_points_3 = get_field('summary_points_3');?>
+                    <ul>
+                        <li><?php echo $summary_points_1; ?></li>
+                        <li><?php echo $summary_points_2; ?></li>
+                        <li><?php echo $summary_points_3; ?></li>
+                    </ul>
+                </div>
+            </div> 
             </div>
             <div class="title_area">
                 <div class="<?php the_field('p_status'); ?>">
@@ -25,19 +38,7 @@ get_header(); ?>
                     <?php the_title(); ?>
                 </h2>
             </div>
-            <div class="summary_points">
-                <h3><span>SUMMARY POINTS</span><span>プログラムの特色</span></h3>
-                <div class="s_p_d">
-                    <?php $summary_points_1 = get_field('summary_points_1');?>
-                    <?php $summary_points_2 = get_field('summary_points_2');?>
-                    <?php $summary_points_3 = get_field('summary_points_3');?>
-                    <ul>
-                        <li><?php echo $summary_points_1; ?></li>
-                        <li><?php echo $summary_points_2; ?></li>
-                        <li><?php echo $summary_points_3; ?></li>
-                    </ul>
-                </div>
-            </div>
+            
             <div class="p_team">
                 <?php $p_team = get_field('p_team');?>
                 <?php if(empty($p_team)):?>

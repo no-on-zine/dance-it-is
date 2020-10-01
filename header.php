@@ -16,7 +16,7 @@
                 <div class="h_right">
                     <h1>
                         <a href="<?php echo home_url() ?>/">
-						<img src="<?php bloginfo('template_url'); ?>/images/common/logo.png" alt="ダンスでいこう！！　DANCE IT IS!!" title="ダンスでいこう！！　DANCE IT IS!!">
+						<img src="<?php bloginfo('template_url'); ?>/images/common/logo.png?<?php echo date("YmdHis");?>" alt="ダンスでいこう！！　DANCE IT IS!!" title="ダンスでいこう！！　DANCE IT IS!!">
 
 					</a>
                     </h1>
@@ -65,11 +65,11 @@
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="#">MAGAZINE</a>
+                                <a href="<?php echo home_url() ?>/uc">MAGAZINE</a>
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="#">ARCHIVE</a>
+                                <a href="<?php echo home_url() ?>/uc">ARCHIVE</a>
                             </li>
                         </ul>
                         <ul class="sp_nav">

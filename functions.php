@@ -266,26 +266,26 @@ function add_files() {
 wp_enqueue_script( 'jquery.inview.min', get_template_directory_uri() . '/js/jquery.inview.min.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 'jquery.simpleTicker', get_template_directory_uri() . '/js/jquery.simpleTicker.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 't.min', get_template_directory_uri() . '/js/t.min.js', array( 'jquery' ), '1.0.1', false );
-wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.0.9', false );
+wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.1.8', false );
 
 // CSS
 
 
 if ( ( is_page_template( array('page-2020top.php','page-2021top.php','page-2022top.php')) ) ) {
-	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.0.7' );
+	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.1.8' );
 	  wp_enqueue_style( 'ticker', get_template_directory_uri() . '/css/jquery.simpleTicker.css', "", '1.0.0' );
     }
     
     elseif ( is_page() ) {
-	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.0.7' );
+	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.1.8' );
     }
 		
     elseif ( is_archive() || is_single() ) {
-	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.0.7' );
+	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.1.8' );
 	}
 
 	else {
-		wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.0.7' );
+		wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.1.8' );
 	}
 	
 	wp_enqueue_style( 'font', 'https://use.typekit.net/osf7foa.css', "", '1.0.0' );
@@ -316,7 +316,7 @@ add_action('wp_enqueue_scripts', 'add_files');
 
 //管理画面のCSS
 function my_admin_style(){
-    wp_enqueue_style( 'my_admin_style', get_template_directory_uri().'/css/my_admin_style.css', "", '1.0.9' );
+    wp_enqueue_style( 'my_admin_style', get_template_directory_uri().'/css/my_admin_style.css', "", '1.1.8' );
 }
 add_action( 'admin_enqueue_scripts', 'my_admin_style' );
 
@@ -387,3 +387,9 @@ add_filter('protected_title_format', 'remove_protected');
 function remove_protected($title) {
        return '%s';
 }
+
+//ループ回数を取得
+function loopNumber(){
+	global $wp_query;
+	return $wp_query->current_post+1;
+	}
