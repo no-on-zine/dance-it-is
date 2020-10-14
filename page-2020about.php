@@ -4,7 +4,6 @@ get_header(); ?>
 <?php if( !post_password_required( $post->ID ) ) : ?>
 <main>
     <section id="m_v">
-        <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
                 <?php the_post_thumbnail(); ?>

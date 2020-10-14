@@ -46,31 +46,25 @@
     }
 }
 
-body.program2020-template {
-    main {
-        padding: 0 2%;
-    }
+.wp-block-image figcaption {
+    font-size: 1.4rem;
 }
 
 main {
+    padding: 0 2%;
+
     #m_v {
         position: relative;
 
         .w_box {
-            background: #fff;
-            width: 100px;
-            height: 25px;
-            position: absolute;
-            z-index: 100;
-            top: -1px;
-            left: -2px;
-
             &.title {
+                z-index: 100;
+                position: absolute;
+                height: 25px;
+                background: #fff;
                 width: auto;
                 bottom: -1px;
                 right: -1px;
-                top: unset;
-                left: unset;
                 text-align: right;
                 padding: 0 20px 0 50px;
                 font-size: 2rem;
@@ -283,13 +277,13 @@ main {
                     border: 1px solid $pink;
                     opacity: 1;
                     width: 32%;
-                    margin: 0 2% 0 0;
+                    margin: 0 2% 2% 0;
                     padding: 15px 10px;
                     font-size: 1.8rem;
                     cursor: pointer;
 
                     &:nth-of-type(3n) {
-                        margin: 0;
+                        margin: 0 0 2%;
                     }
 
                     &.block {
@@ -459,6 +453,7 @@ body.archive {
 
                                 ul {
                                     @include flex(flex, wrap, flex-start);
+                                    font-size: 1.2rem;
 
                                     li {
                                         color: #fff;
@@ -608,6 +603,270 @@ body.archive {
                 margin: 0 0 50px;
             }
 
+        }
+    }
+}
+
+.magazine_w {
+    .c_wrap {
+        @include m-w;
+    }
+
+    section.title_area {
+        margin: 80px 0;
+
+        .c_wrap {
+            .date.pink {
+                color: $pink;
+            }
+
+            .tarm {
+                color: $pink;
+                font-size: 2rem;
+                margin: 0 0 10px;
+            }
+
+            h2 {
+                font-size: 4.5rem;
+                font-weight: bold;
+                line-height: 1.6;
+
+                &.archives {
+                    font-size: 4rem;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                }
+
+                img {
+                    max-width: 330px;
+                }
+            }
+
+            p {
+                margin: 30px 0 0;
+            }
+
+            .border {
+                width: 70px;
+                height: 2px;
+                background: #000;
+                margin: 20px 0 30px;
+            }
+        }
+    }
+
+    #contents {
+        .c_wrap {
+            &.flex {
+                @include flex(flex, wrap, flex-start);
+
+                .post_w {
+                    display: block;
+                    width: 30%;
+                    margin: 0 0 5%;
+
+                    &:nth-of-type(3n+2) {
+                        margin: 0 5% 5%;
+                    }
+
+                    .tarm {
+                        color: $pink;
+                        margin: 15px 0 0;
+                    }
+
+                    h3 {
+                        font-size: 2rem;
+                        font-weight: bold;
+                        line-height: 1.5;
+                    }
+
+                    .border {
+                        width: 70px;
+                        height: 2px;
+                        background: #000;
+                        margin: 13px 0 9px;
+                    }
+                }
+            }
+
+            .wp_contents {
+                h3 {
+                    color: $pink;
+                    font-weight: bold;
+                    font-size: 2.8rem;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 50px;
+                        height: 1px;
+                        background: #000;
+                        vertical-align: 20%;
+                        margin: 0 10px 0 0;
+                    }
+                }
+            }
+
+            .f_a_p {
+                background: #000;
+                color: #fff;
+                padding: 60px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .f_author_photo {
+                    flex: 1;
+                }
+
+                .f_author {
+                    flex: 2;
+                    margin: 0 0 0 60px;
+
+                    h4 {
+                        font-size: 3rem;
+                        margin: 0 0 40px;
+
+                        span {
+                            color: $pink;
+                            font-size: 1.8rem;
+                            vertical-align: middle;
+                            letter-spacing: 2px;
+                            padding: 0 0 0 20px;
+                        }
+                    }
+                }
+
+            }
+
+            ul {
+                li {
+                    @include flex(flex, nowrap, flex-start);
+                    border-top: 1px solid #999;
+                    padding: 20px 30px;
+
+                    &:last-child {
+                        border-bottom: 1px solid #999;
+                    }
+
+                    .post_w {
+                        &.archives {
+                            display: block;
+                            width: auto;
+                            background: url(../images/page/news_a.png) no-repeat 100% center/20px;
+                            padding: 0 50px 0 0;
+                            margin: 0 0 0 50px;
+                            width: 100%;
+                        }
+                    }
+
+                    .date {
+                        color: $pink;
+                    }
+
+                }
+            }
+        }
+    }
+
+    section.cat {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 100px 0 0;
+
+        .c_wrap {
+            ul {
+                @include flex(flex, nowrap, center);
+                border-top: 2px solid #000;
+                border-bottom: 2px solid #000;
+                padding: 10px 0;
+                margin: 10px 0 0;
+
+                li {
+                    margin: 0 30px;
+
+                    a {
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: $pink;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.tag {
+        margin: 70px 0 0;
+
+        .c_wrap {
+            @include flex(flex, nowrap, flex-start);
+            align-items: center;
+            line-height: 0.7;
+
+            h4 {
+                font-size: 2rem;
+                font-weight: bold;
+                border-right: 2px solid #000;
+                padding: 0 15px 0 0;
+                margin: 0 4px 0 0;
+            }
+
+            ul {
+                @include flex(flex, nowrap, flex-start);
+
+                li {
+                    margin: 0 0 0 15px;
+
+                    a {
+                        transition: color 0.3s ease;
+                        background: #dcdddd;
+                        vertical-align: sub;
+                        display: inline-block;
+                        padding: 5px;
+
+                        &:hover {
+                            color: $pink;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.share {
+        margin: 70px 0 0;
+
+        .c_wrap {
+            @include flex(flex, nowrap, flex-start);
+            align-items: center;
+            line-height: 0.7;
+
+            h4 {
+                font-size: 2rem;
+                font-weight: bold;
+                border-right: 2px solid #000;
+                padding: 0 15px 0 0;
+                margin: 0 4px 0 0;
+            }
+
+            ul {
+                @include flex(flex, nowrap, flex-start);
+
+                li {
+                    margin: 0 0 0 15px;
+                    max-width: 30px;
+
+                    a {
+                        vertical-align: sub;
+                        display: inline-block;
+                    }
+                }
+            }
         }
     }
 }

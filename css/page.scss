@@ -5,20 +5,19 @@ main {
     #m_v {
         position: relative;
 
-        .w_box {
-            background: #fff;
-            width: 8.6%;
-            height: 25px;
-            position: absolute;
-            z-index: 100;
-            top: -1px;
+        .thum {
+            padding: 0 2%;
+        }
 
+        .w_box {
             &.title {
+                background: #fff;
+                height: 25px;
+                position: absolute;
+                z-index: 100;
                 width: auto;
                 bottom: -1px;
                 right: -1px;
-                top: unset;
-                left: unset;
                 text-align: right;
                 padding: 0 20px 0 50px;
                 font-size: 2rem;
@@ -242,11 +241,6 @@ body.page-template-page-2020about {
     #about_project {
         .c_wrap {
             .c_text {
-                font-size: 1.4rem;
-
-                .f16 {
-                    font-size: 1.6rem;
-                }
 
                 h3 {
                     background: $pink;

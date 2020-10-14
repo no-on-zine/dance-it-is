@@ -4,7 +4,6 @@ get_header(); ?>
 <?php if( !post_password_required( $post->ID ) ) : ?>
 <main>
     <section id="m_v">
-        <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
                 <?php the_post_thumbnail(); ?>
@@ -396,11 +395,21 @@ get_header(); ?>
                 <div class="p_list_items slide_fade10">
                     <h3><span>performance</span>パフォーマンス</h3>
                     <div class="i_w">
+
                         <div class="item">
                             <div class="flex">
                                 <div class="left">
                                     <h4><span class="yellow">京　都</span>公演プラットフォーム</h4>
-                                    <p class="t_name">ダンスでいこう2020運営チーム</p>
+                                    <p class="t_name">京都コレオグラフィーアワード実行委員会</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="left">
+                                    <p>
+                                        「ダンスでいこう！！」では、新たなプログラムとして若手振付家のためのアワード『KYOTO CHOREOGRAPHY
+                                        AWARD』を創設します。このアワードは、振付家育成のひとつの方法として、若手振付家に作品発表の機会と賞を設け、観客と共に作品を巡るディスカッションを行うことにより、振付家を目指すアーティストの次なる活動へのステップとなることを目的に開催します。
+                                        各地のダンスフェスティバルのプロデューサーやダンス関係者、他分野の専門家を招き、いくつかの賞を予定しますが、それはその時点の作品の完成度・魅力だけではなく、未来に対する期待を含めた後押しとなる賞を目指します。
+                                    </p>
                                     <div class="link">
                                         <div class="detail">
                                             <a href="<?php echo home_url() ?>/program2020/kyoto2020/"><span>プログラム詳細を見る
@@ -415,8 +424,8 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
+
                     </div>
                 </div>
             </div>

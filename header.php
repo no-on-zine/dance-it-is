@@ -65,7 +65,7 @@
                             </li>
                             <li>｜</li>
                             <li>
-                                <a href="<?php echo home_url() ?>/uc">MAGAZINE</a>
+                                <a href="<?php echo home_url() ?>/magazine">MAGAZINE</a>
                             </li>
                             <li>｜</li>
                             <li>

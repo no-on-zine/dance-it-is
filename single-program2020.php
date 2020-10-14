@@ -8,7 +8,6 @@ get_header(); ?>
 <?php if( !post_password_required( $post->ID ) ) : ?>
 <main>
     <section id="m_v">
-        <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
                 <img src="<?php the_field('p_thumb'); ?>">
@@ -211,7 +210,6 @@ get_header(); ?>
             <div class="o_box flex">
                 <?php $p_name_1 = get_field('p_name_1');?>
                 <?php if(empty($p_name_1)):?>
-
                 <?php else:?>
                 <div class="p_name_1 flex_items box_1">
                     <?php echo $p_name_1; ?>
@@ -220,7 +218,6 @@ get_header(); ?>
 
                 <?php $p_name_2 = get_field('p_name_2');?>
                 <?php if(empty($p_name_2)):?>
-
                 <?php else:?>
                 <div class="p_name_2 flex_items box_2">
                     <?php echo $p_name_2; ?>
@@ -229,7 +226,6 @@ get_header(); ?>
 
                 <?php $p_name_3 = get_field('p_name_3');?>
                 <?php if(empty($p_name_3)):?>
-
                 <?php else:?>
                 <div class="p_name_3 flex_items box_3">
                     <?php echo $p_name_3; ?>
@@ -238,7 +234,6 @@ get_header(); ?>
 
                 <?php $p_name_4 = get_field('p_name_4');?>
                 <?php if(empty($p_name_4)):?>
-
                 <?php else:?>
                 <div class="p_name_4 flex_items box_4">
                     <?php echo $p_name_4; ?>
@@ -247,19 +242,145 @@ get_header(); ?>
 
                 <?php $p_name_5 = get_field('p_name_5');?>
                 <?php if(empty($p_name_5)):?>
-
                 <?php else:?>
                 <div class="p_name_5 flex_items box_5">
                     <?php echo $p_name_5; ?>
                 </div>
                 <?php endif;?>
+
+                <?php $p_name_6 = get_field('p_name_6');?>
+                <?php if(empty($p_name_6)):?>
+                <?php else:?>
+                <div class="p_name_6 flex_items box_6">
+                    <?php echo $p_name_6; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_7 = get_field('p_name_7');?>
+                <?php if(empty($p_name_7)):?>
+                <?php else:?>
+                <div class="p_name_7 flex_items box_7">
+                    <?php echo $p_name_7; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_8 = get_field('p_name_8');?>
+                <?php if(empty($p_name_8)):?>
+                <?php else:?>
+                <div class="p_name_8 flex_items box_8">
+                    <?php echo $p_name_8; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_9 = get_field('p_name_9');?>
+                <?php if(empty($p_name_9)):?>
+                <?php else:?>
+                <div class="p_name_9 flex_items box_9">
+                    <?php echo $p_name_9; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_10 = get_field('p_name_10');?>
+                <?php if(empty($p_name_10)):?>
+                <?php else:?>
+                <div class="p_name_10 flex_items box_10">
+                    <?php echo $p_name_10; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_11 = get_field('p_name_11');?>
+                <?php if(empty($p_name_11)):?>
+                <?php else:?>
+                <div class="p_name_11 flex_items box_11">
+                    <?php echo $p_name_11; ?>
+                </div>
+                <?php endif;?>
+
+                <?php $p_name_12 = get_field('p_name_12');?>
+                <?php if(empty($p_name_12)):?>
+                <?php else:?>
+                <div class="p_name_12 flex_items box_12">
+                    <?php echo $p_name_12; ?>
+                </div>
+                <?php endif;?>
+
             </div>
 
             <div class="contents">
                 <?php the_content(); ?>
-                <?php include("inc/single-program/box_1.php"); ?>
-                <?php include("inc/single-program/box_2.php"); ?>
-                <?php include("inc/single-program/box_3.php"); ?>
+
+                <?php $p_name = get_field('p_name_1');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_1.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_2');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_2.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_3');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_3.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_4');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_4.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_5');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_5.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_6');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_6.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_7');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_7.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_8');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_8.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_9');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_9.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_10');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_10.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_11');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_11.php"); ?>
+                <?php endif;?>
+
+                <?php $p_name = get_field('p_name_12');?>
+                <?php if(empty($p_name)):?>
+                <?php else:?>
+                    <?php include("inc/single-program/box_12.php"); ?>
+                <?php endif;?>
+
             </div>
 
         </div>

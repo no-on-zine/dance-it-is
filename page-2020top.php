@@ -3,7 +3,6 @@ get_header(); ?>
 
 <main>
     <section id="m_v">
-        <div class="w_box"></div>
         <div class="c_wrap">
             <p class="text">コンテンポラリーダンス・プラットフォームを活用した振付家育成事業</p>
             <div class="slider">
@@ -19,11 +18,15 @@ get_header(); ?>
                 </div>
                 <div id="ticker-fade" class="ticker">
                     <ul>
+                        <?php query_posts('post_type=news&posts_per_page=4'); ?>
+                        <?php if(have_posts()): while(have_posts()): the_post(); ?>
                         <li>
-                            <a href="<?php echo home_url() ?>/news">
-                                ダンスでいこう！！京都公演プラットフォームにて、若手振付家を対象としたアワードを創設します！
+                            <a href="<?php the_permalink(); ?>">
+                                <?php the_title_attribute(); ?>
                             </a>
                         </li>
+
+                        <?php endwhile; endif; ?>
                     </ul>
                 </div>
             </div>
@@ -74,25 +77,35 @@ get_header(); ?>
                         <h3><span>Region Platform</span>地域プラットフォーム</h3>
                         <div class="i_w">
                             <div class="item">
-                                <h4><span class="red">北海道</span>北海道コンテンポラリーダンス普及委員会</h4>
-                                <p>Sapporo Choreo（サッポロ・コレオ）振付家養成講座</p>
+                                <a href="<?php echo home_url() ?>/program2020/hcd2020/">
+                                    <h4><span class="red">北海道</span>北海道コンテンポラリーダンス普及委員会</h4>
+                                    <p>Sapporo Choreo（サッポロ・コレオ）振付家養成講座</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="red">名古屋</span>ダンスハウス黄金4442</h4>
-                                <p>レジデンスアーティスト育成事業2021</p>
+                                <a href="<?php echo home_url() ?>/program2020/dh4422_2020/">
+                                    <h4><span class="red">名古屋</span>ダンスハウス黄金4442</h4>
+                                    <p>レジデンスアーティスト育成事業2021</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="red">城　崎</span>Dacne Camp Project</h4>
-                                <p>Dance Camp vol.4＆ダイアローグ・ワークショップ
-                                    <br>by ディーン・モス＆余越保子</p>
+                                <a href="<?php echo home_url() ?>/program2020/dc2020/">
+                                    <h4><span class="red">城　崎</span>Dacne Camp Project</h4>
+                                    <p>Dance Camp vol.4＆ダイアローグ・ワークショップ
+                                        <br>by ディーン・モス＆余越保子</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="red">神　戸</span>NPO法人ダンスボックス</h4>
-                                <p>DANCE ARTIST VIEW2020「セルフカルチベート企画」</p>
+                                <a href="<?php echo home_url() ?>/program2020/db2020/">
+                                    <h4><span class="red">神　戸</span>NPO法人ダンスボックス</h4>
+                                    <p>DANCE ARTIST VIEW2020「セルフカルチベート企画」</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="red">広　島</span>FREE HEARTS</h4>
-                                <p>ダンスアートプロジェクト！！</p>
+                                <a href="<?php echo home_url() ?>/program2020/fh2020/">
+                                    <h4><span class="red">広　島</span>FREE HEARTS</h4>
+                                    <p>ダンスアートプロジェクト！！</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -101,12 +114,16 @@ get_header(); ?>
                         <h3><span>Creative Partner</span>クリエイティブパートナー</h3>
                         <div class="i_w">
                             <div class="item">
-                                <h4><span class="blue">札幌・京都</span>C³ / Contact Choreograph Crossing</h4>
-                                <p>建築とコンタクト（京都‒札幌）</p>
+                                <a href="<?php echo home_url() ?>/program2020/c32020/">
+                                    <h4><span class="blue">札幌・京都</span>C³ / Contact Choreograph Crossing</h4>
+                                    <p>建築とコンタクト（京都‒札幌）</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="blue">福　岡</span>山崎広太／フルイドハグハグ、NPO法人コデックス</h4>
-                                <p>わたしと身体の緩やかなダンス革命 in 福岡</p>
+                                <a href="<?php echo home_url() ?>/program2020/codex2020/">
+                                    <h4><span class="blue">福　岡</span>山崎広太／フルイドハグハグ、NPO法人コデックス</h4>
+                                    <p>わたしと身体の緩やかなダンス革命 in 福岡</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -115,12 +132,16 @@ get_header(); ?>
                         <h3><span>Creative Study</span>クリエイティブスタディ</h3>
                         <div class="i_w">
                             <div class="item">
-                                <h4><span class="green">ダンスヒストリー</span>ダンスヒストリー・スタディーズ</h4>
-                                <p>ダンサー・振付家・制作者に「役に立つ」バレエ・ダンス史</p>
+                                <a href="<?php echo home_url() ?>/program2020/dhs2020/">
+                                    <h4><span class="green">ダンスヒストリー</span>ダンスヒストリー・スタディーズ</h4>
+                                    <p>ダンサー・振付家・制作者に「役に立つ」バレエ・ダンス史</p>
+                                </a>
                             </div>
                             <div class="item">
-                                <h4><span class="green">ダンスメディア</span>一般社団法人ダンス・ニッポン・アソシエイツ</h4>
-                                <p>『ダンスを撮る！』第4回-ダンス映像撮影ワークショップ-</p>
+                                <a href="<?php echo home_url() ?>/program2020/na2020/">
+                                    <h4><span class="green">ダンスメディア</span>一般社団法人ダンス・ニッポン・アソシエイツ</h4>
+                                    <p>『ダンスを撮る！』-第4回ダンス映像撮影ワークショップ-</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -129,8 +150,10 @@ get_header(); ?>
                         <h3><span>performance</span>パフォーマンス</h3>
                         <div class="i_w">
                             <div class="item">
-                                <h4><span class="yellow">京　都</span>ダンスでいこう2020運営チーム</h4>
-                                <p>若手振付家のためのダンス公演（仮）</p>
+                                <a href="<?php echo home_url() ?>/program2020/kyoto2020/">
+                                    <h4><span class="yellow">京　都</span>ダンスでいこう2020運営チーム</h4>
+                                    <p>若手振付家のためのダンス公演（仮）</p>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -267,6 +290,51 @@ get_header(); ?>
 
             </div>
     </section>
+
+    <section id="magazine">
+        <div class="c_wrap">
+            <div class="flex">
+                <div class="left">
+                    <h2>
+                        <img src="<?php bloginfo('template_url'); ?>/images/top/top_magazine_01.png" alt="Magazine">
+                    </h2>
+                    <h3>
+                        <img src="<?php bloginfo('template_url'); ?>/images/top/top_magazine_02.png"
+                            alt="CHOREOGRAPHER　ダンスを書く仕事！？">
+                    </h3>
+                    <p>
+                        日本でコンテンポラリーダンスの振付家を育成するとはどういうことなのか？振付家の役割や、ダンスが社会に求められることは？？
+                        ダンスと接点を持つ多ジャンルの研究者やディレクター、アーティストなどの視点から、コンテンポラリーダンスを読み解くマガジン。
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="magazine_w">
+                        <?php query_posts('post_type=magazine&posts_per_page=2'); ?>
+                        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                        <a href="<?php the_permalink(); ?>">
+                            <div class="border"></div>
+                            <div class="date">
+                                <?php echo get_post_time('Y.n.j D'); ?>
+                            </div>
+                            <div class="i_w">
+                                <?php the_post_thumbnail('top_tmb'); ?>
+                            </div>
+                            <div class="title">
+                                <?php the_title_attribute(); ?>
+                            </div>
+                        </a>
+                        <?php endwhile; endif; ?>
+                    </div>
+                    <div class="more">
+                        <a href="<?php echo home_url() ?>/magazine">
+                            <img src="<?php bloginfo('template_url'); ?>/images/top/more_w.png" alt="MORE">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="instagram" class="slide_fade10">
         <div class="c_wrap">
             <div class="c_text">

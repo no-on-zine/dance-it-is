@@ -266,26 +266,26 @@ function add_files() {
 wp_enqueue_script( 'jquery.inview.min', get_template_directory_uri() . '/js/jquery.inview.min.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 'jquery.simpleTicker', get_template_directory_uri() . '/js/jquery.simpleTicker.js', array( 'jquery' ), '1.0.0', false );
 wp_enqueue_script( 't.min', get_template_directory_uri() . '/js/t.min.js', array( 'jquery' ), '1.0.1', false );
-wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.1.8', false );
+wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array( 'jquery' ), '1.2.4', false );
 
 // CSS
 
 
 if ( ( is_page_template( array('page-2020top.php','page-2021top.php','page-2022top.php')) ) ) {
-	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.1.8' );
+	  wp_enqueue_style( 'top', get_template_directory_uri() . '/css/top.css', "", '1.2.4' );
 	  wp_enqueue_style( 'ticker', get_template_directory_uri() . '/css/jquery.simpleTicker.css', "", '1.0.0' );
     }
     
     elseif ( is_page() ) {
-	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.1.8' );
+	  wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.2.4' );
     }
 		
     elseif ( is_archive() || is_single() ) {
-	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.1.8' );
+	  wp_enqueue_style( 'single', get_template_directory_uri() . '/css/single.css', "", '1.2.4' );
 	}
 
 	else {
-		wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.1.8' );
+		wp_enqueue_style( 'page', get_template_directory_uri() . '/css/page.css', "", '1.2.4' );
 	}
 	
 	wp_enqueue_style( 'font', 'https://use.typekit.net/osf7foa.css', "", '1.0.0' );
@@ -315,10 +315,10 @@ add_action('wp_enqueue_scripts', 'add_files');
 //} 
 
 //管理画面のCSS
-function my_admin_style(){
-    wp_enqueue_style( 'my_admin_style', get_template_directory_uri().'/css/my_admin_style.css', "", '1.1.8' );
-}
-add_action( 'admin_enqueue_scripts', 'my_admin_style' );
+//function my_admin_style(){
+//    wp_enqueue_style( 'my_admin_style', get_template_directory_uri().'/css/my_admin_style.css', "", '1.2.4' );
+//}
+//add_action( 'admin_enqueue_scripts', 'my_admin_style' );
 
 
 //authorページの非表示
@@ -347,40 +347,40 @@ function attachment404() {
 
 
 // メモ表示行を投稿一覧に追加する
-function memo_columns_head($defaults) {
-    $defaults['WP_PostMemo'] = 'メモ';
-    return $defaults;
-}
-function memo_columns_content($column_name, $post_ID) {
+//function memo_columns_head($defaults) {
+//    $defaults['WP_PostMemo'] = 'メモ';
+//    return $defaults;
+//}
+//function memo_columns_content($column_name, $post_ID) {
     if ($column_name == 'WP_PostMemo') {
         $memocontent = get_post_meta( $post_ID, 'mypostmemo', true );
         echo nl2br($memocontent);
     }
-}
-add_filter('manage_posts_columns', 'memo_columns_head');
-add_action('manage_posts_custom_column', 'memo_columns_content', 10, 2);
+//}
+//add_filter('manage_posts_columns', 'memo_columns_head');
+//add_action('manage_posts_custom_column', 'memo_columns_content', 10, 2);
 
 
 // メモ入力欄を投稿編集画面に追加する
-function _add_custom_mypostmemo()
-{
-    add_meta_box( 'mymemomypostmemo', 'メモ', '_add_memometa_box', 'post', 'advanced', 'default', NULL );
-}
-add_action( 'add_meta_boxes', '_add_custom_mypostmemo' );
+//function _add_custom_mypostmemo()
+//{
+//    add_meta_box( 'mymemomypostmemo', 'メモ', '_add_memometa_box', 'post', 'advanced', 'default', NULL );
+//}
+//add_action( 'add_meta_boxes', '_add_custom_mypostmemo' );
 
-function _add_memometa_box( $post )
-{
-    $value = get_post_meta( $post->ID, 'mypostmemo', TRUE );
-    echo '<input type="text" name="mypostmemo" value="'.esc_attr( $value ).'" style="width:100%">';
-}
+//function _add_memometa_box( $post )
+//{
+//    $value = get_post_meta( $post->ID, 'mypostmemo', TRUE );
+//    echo '<input type="text" name="mypostmemo" value="'.esc_attr( $value ).'" style="width:100%">';
+//}
 
 //メモの保存処理
-function _save_custom_mypostmemo( $post_id )
-{
-    update_post_meta( $post_id, 'mypostmemo', $_POST[ 'mypostmemo' ] );
-    return $post_id;
-}
-add_action( 'save_post', '_save_custom_mypostmemo' );
+//function _save_custom_mypostmemo( $post_id )
+//{
+//    update_post_meta( $post_id, 'mypostmemo', $_POST[ 'mypostmemo' ] );
+//    return $post_id;
+//}
+//add_action( 'save_post', '_save_custom_mypostmemo' );
 
 //保護中　を消去
 add_filter('protected_title_format', 'remove_protected');
@@ -393,3 +393,10 @@ function loopNumber(){
 	global $wp_query;
 	return $wp_query->current_post+1;
 	}
+
+/*【管理画面】投稿メニューを非表示 */
+function remove_menus () {
+	global $menu;
+	remove_menu_page( 'edit.php' ); // 投稿を非表示
+  }
+  add_action('admin_menu', 'remove_menus');

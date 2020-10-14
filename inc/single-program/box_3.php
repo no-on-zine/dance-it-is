@@ -131,6 +131,14 @@
         </div>
         <?php endif;?>
 
+        <?php $p_free_3 = get_field('p_free_3');?>
+        <?php if(empty($p_free_3)):?>
+        <?php else:?>
+        <div class="f_w p_free">
+            <?php echo $p_free_3; ?>
+        </div>
+        <?php endif;?>
+
         <?php $p_inquiry_3 = get_field('p_inquiry_3');?>
         <?php if(empty($p_inquiry_3)):?>
         <?php else:?>
@@ -150,16 +158,15 @@
             </div>
         </div>
     </div>
+
+    <?php $p_l_photo_1_3 = get_field('p_l_photo_1_3');?>
+    <?php if(empty($p_l_photo_1_3)):?>
+    <?php else:?>
     <div class="right">
         <div class="lecturer">
-            <?php $p_l_photo_1_3 = get_field('p_l_photo_1_3');?>
-            <?php if(empty($p_l_photo_1_3)):?>
-            <?php else:?>
             <div class="i_w">
                 <img src="<?php echo $p_l_photo_1_3; ?>">
             </div>
-            <?php endif;?>
-
             <?php $p_l_name_1_3 = get_field('p_l_name_1_3');?>
             <?php if(empty($p_l_name_1_3)):?>
             <?php else:?>
@@ -216,6 +223,7 @@
             <p><?php echo $p_l_profile_3_3; ?></p>
             <?php endif;?>
         </div>
-
     </div>
+    <?php endif;?>
+
 </div>

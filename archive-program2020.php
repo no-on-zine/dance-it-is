@@ -3,7 +3,6 @@ get_header(); ?>
 
 <main>
     <section id="m_v">
-        <div class="w_box"></div>
         <div class="c_wrap">
             <div class="thum">
                 <img src="<?php bloginfo('template_url'); ?>/images/page/pr_m_v.jpg" alt="">

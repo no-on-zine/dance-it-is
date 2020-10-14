@@ -395,7 +395,7 @@ html {
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: din-2014, "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
   line-height: 1.8;
   word-wrap: break-word;
@@ -476,15 +476,26 @@ header .c_wrap {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 2% 10px;
+  padding: 20px 2% 10px;
 }
 
 header .c_wrap .h_right {
   width: 20%;
+  position: relative;
+}
+
+header .c_wrap .h_right h1 {
+  position: absolute;
+  z-index: 100;
+  left: -1px;
 }
 
 header .c_wrap .h_right h1 a {
   display: block;
+}
+
+header .c_wrap .h_right h1 a:hover {
+  opacity: 1;
 }
 
 header .c_wrap .h_left {
@@ -504,7 +515,7 @@ header .c_wrap .h_left .sns ul {
 
 header .c_wrap .h_left .sns ul li {
   max-width: 30px;
-  margin: 0 0 15px 15px;
+  margin: 0 0 10px 15px;
 }
 
 header .c_wrap .h_left nav .pc_nav {
@@ -592,6 +603,7 @@ section#f_menu .c_wrap .info_b {
   border-top: 1px solid #000;
   padding: 30px 0;
   line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 section#f_menu .c_wrap .info_b.info_4 {
@@ -694,21 +706,18 @@ main #m_v {
   position: relative;
 }
 
-main #m_v .w_box {
-  background: #fff;
-  width: 8.6%;
-  height: 25px;
-  position: absolute;
-  z-index: 100;
-  top: -1px;
+main #m_v .thum {
+  padding: 0 2%;
 }
 
 main #m_v .w_box.title {
+  background: #fff;
+  height: 25px;
+  position: absolute;
+  z-index: 100;
   width: auto;
   bottom: -1px;
   right: -1px;
-  top: unset;
-  left: unset;
   text-align: right;
   padding: 0 20px 0 50px;
   font-size: 2rem;
@@ -930,14 +939,6 @@ main section#platform .c_wrap .p_list .p_list_items .i_w .item h4 span.yellow {
 
 main section#platform .c_wrap .p_list .p_list_items .i_w .item .t_name {
   font-size: 2.2rem;
-}
-
-body.page-template-page-2020about #about_project .c_wrap .c_text {
-  font-size: 1.4rem;
-}
-
-body.page-template-page-2020about #about_project .c_wrap .c_text .f16 {
-  font-size: 1.6rem;
 }
 
 body.page-template-page-2020about #about_project .c_wrap .c_text h3 {
